@@ -201,3 +201,51 @@ footer a:hover { color:var(--gold); }
 @media (max-width:1100px) and (min-width:901px) { .hero-actions { flex-wrap:wrap; gap:24px; } .hero h1 { font-size:64px; } }
 @media (max-width:900px) { .hero-copy { padding:54px 26px 20px; } .hero h1 { font-size:clamp(50px,9vw,78px); } .hero-visual.hero-brand { padding:0 24px 36px; } .hero-brand-logo { max-width:490px; } .york-hero-panel,.cp-hero-panel,.tm44-hero-panel { border-left:0; border-top:5px double var(--gold); } }
 @media (max-width:600px) { .site-header { min-height:108px; } .header-cta { max-width:190px; font-size:10px; } .hero-copy { padding:44px 22px 16px; } .hero h1 { font-size:clamp(44px,12vw,65px); } .hero-actions { gap:24px; } .hero-visual.hero-brand { padding:0 18px 28px; } .section { padding-top:64px; padding-bottom:64px; } .service-item { padding:30px 24px; } .marquee { flex-wrap:wrap; white-space:normal; gap:12px 18px; padding:18px; text-align:center; font-size:12px; } .marquee i { font-size:12px; } .quote-form { outline-offset:4px; } .york-hero h1,.cp-hero h1,.tm44-hero h1 { font-size:clamp(43px,11vw,62px); } }
+
+/* Refined, self-hosted service-sign typography and quieter print details. */
+@font-face { font-family:"Barlow Condensed"; src:url('/fonts/barlow-condensed-bold.ttf') format('truetype'); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"DM Sans"; src:url('/fonts/dm-sans-regular.ttf') format('truetype'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"DM Sans"; src:url('/fonts/dm-sans-bold.ttf') format('truetype'); font-weight:600 900; font-style:normal; font-display:swap; }
+:root { --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif; }
+body { font-family:"DM Sans",Arial,sans-serif; }
+main { position:relative; isolation:isolate; }
+main::after { content:""; position:absolute; inset:0; z-index:10; pointer-events:none; opacity:.035; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23g)' opacity='.6' d='M0 0h180v180H0z'/%3E%3C/svg%3E"); }
+h1,h2,h3 { font-weight:700!important; text-transform:uppercase; letter-spacing:.012em; }
+h1 em,h2 em { font-family:Georgia,serif; font-weight:700; text-transform:none; letter-spacing:-.055em; }
+h2 em { font-size:.88em; }
+.hero { grid-template-columns:1fr 1fr; min-height:590px; padding-right:clamp(22px,5vw,76px); column-gap:30px; align-items:center; }
+.hero-copy { padding:48px 0 50px; }
+.hero h1 { font-size:clamp(70px,7.3vw,106px); line-height:.94; margin:22px 0 28px; text-shadow:none; }
+.hero h1 em { font-size:.72em; line-height:1.2; }
+.hero-copy>p { max-width:510px; font-size:16px; line-height:1.75; }
+.hero-visual.hero-brand { padding:0; overflow:visible; }
+.hero-brand-logo { width:100%; max-width:620px; aspect-ratio:1254 / 1000; object-fit:contain; }
+.hero-actions { gap:25px; margin-top:28px; }
+.trust-row { margin-top:30px; padding-top:18px; border-top:1px solid var(--line); }
+.eyebrow,.kicker { font-size:10px; letter-spacing:.17em; }
+.section-heading h2,.care-plan h2,.faq h2,.quote-section h2 { font-size:clamp(44px,5vw,70px); line-height:1.02; }
+.section-heading>p { font-size:14px; }
+.service-item { box-shadow:none; border:1px solid var(--navy); border-radius:3px; border-top:4px solid var(--red); padding:30px; }
+.service-item:hover { box-shadow:0 8px 20px rgba(16,46,72,.07); }
+.service-icon { width:84px; height:84px; background:none; border:0; border-radius:0; box-shadow:none; margin-bottom:28px; color:var(--navy); }
+.service-icon svg { width:100%; height:100%; }
+.service-item h3 { font-size:32px; line-height:1.05; max-width:100%; }
+.service-item p { font-size:14px; line-height:1.75; }
+.service-item li { font-size:12px; }
+.header-cta,.button { border-radius:3px; box-shadow:3px 3px 0 var(--navy); }
+.york-check-grid article,.cp-inclusion-grid article,.tm44-scope-grid article { box-shadow:none; border-width:1px; border-radius:3px; border-top:3px solid var(--red); }
+.care-plan,.york-reasons,.cp-why,.tm44-included,.maintenance-response { border-block:1px solid var(--gold); }
+.testimonial { border-block:1px solid var(--navy); }
+.testimonial blockquote { font-family:Georgia,serif; font-size:clamp(28px,3.1vw,43px); font-weight:400; letter-spacing:-.03em; }
+.quote-form { box-shadow:none; outline:0; border:1px solid var(--gold); border-radius:3px; }
+.york-ticket,.cp-plan-card,.tm44-report { border:1px solid var(--navy); box-shadow:5px 5px 0 rgba(0,0,0,.18); }
+.process-grid h3,.cp-cycle-grid h3,.tm44-process-grid h3,.york-check-grid h3,.cp-inclusion-grid h3,.tm44-scope-grid h3,.tm44-item-grid h3 { font-size:29px; }
+footer { padding-top:0; padding-bottom:54px; grid-template-columns:240px 1fr 1fr; gap:35px; border-top:0; }
+footer::before { content:"INSPECT  ✦  MAINTAIN  ✦  SERVICE  ✦  BREATHE EASY"; grid-column:1 / -1; display:block; margin-inline:calc(-1 * clamp(22px,7vw,110px)); padding:18px 22px; background:var(--red); color:var(--paper); text-align:center; font:700 19px/1.6 var(--display); letter-spacing:.16em; border-block:4px double var(--paper); }
+.brand-footer .brand-logo { width:210px; height:190px; }
+.brand-footer+p { font-size:14px; line-height:1.8; max-width:390px; }
+.brand-footer~div { gap:14px; font-size:14px; }
+.brand-footer~small { font-size:10px; bottom:22px; }
+@media (min-width:901px) and (max-width:1100px) { .hero h1 { font-size:78px; } .hero { column-gap:20px; } }
+@media (max-width:900px) { .hero { grid-template-columns:1fr; padding:0 26px; gap:8px; } .hero-copy { padding:42px 0 20px; } .hero h1 { font-size:clamp(70px,11vw,96px); } .hero-visual.hero-brand { padding:0 0 40px; } .hero-brand-logo { max-width:480px; } footer { grid-template-columns:180px 1fr; } .brand-footer .brand-logo { width:170px; height:165px; } .brand-footer~div { grid-column:2; text-align:left; } }
+@media (max-width:600px) { .hero { padding:0 22px; } .hero-copy { padding:34px 0 14px; } .hero h1 { font-size:clamp(64px,17vw,86px); margin:20px 0 24px; } .hero-copy>p { font-size:15px; } .hero-actions { gap:22px; } .trust-row { margin-top:28px; } .hero-visual.hero-brand { padding:0 0 28px; } .hero-brand-logo { max-width:370px; } .section-heading h2,.care-plan h2,.faq h2,.quote-section h2 { font-size:46px; } .service-item { padding:28px 24px; } footer { grid-template-columns:1fr; gap:22px; padding-bottom:70px; } footer::before { font-size:15px; letter-spacing:.1em; padding:15px 22px; } .brand-footer .brand-logo { width:190px; height:170px; } .brand-footer~div { grid-column:auto; } .brand-footer~small { bottom:22px; } }

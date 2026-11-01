@@ -1,3 +1,5 @@
+import { ServiceIllustration } from "./_components/service-illustration";
+
 const services = [
   {
     number: "01",
@@ -61,7 +63,7 @@ export default function Home() {
         </div>
 
         <div className="hero-visual hero-brand">
-          <img className="hero-brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
+          <img className="hero-brand-logo" src="/air-care-uk-hero.svg" alt="Air Care UK — Air Conditioning, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
         </div>
       </section>
 
@@ -78,7 +80,7 @@ export default function Home() {
           {services.map((service) => (
             <article className="service-item" key={service.number}>
               <span className="service-number">{service.number}</span>
-              <div className="service-icon" aria-hidden="true"><span>✦</span></div>
+              <div className="service-icon" aria-hidden="true"><ServiceIllustration service={service.number} /></div>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
               <ul>{service.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
