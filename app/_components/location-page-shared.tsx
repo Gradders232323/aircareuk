@@ -33,7 +33,7 @@ type LocationQuoteSectionProps = {
 function Brand({ footer = false }: { footer?: boolean }) {
   return (
     <a className={`brand${footer ? " brand-footer" : ""}`} href="/" aria-label="Air Care UK home">
-      <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} />
+      <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} />
     </a>
   );
 }
@@ -43,6 +43,7 @@ export function LocationHeader({ ctaHref, ctaLabel, navItems }: LocationHeaderPr
     <><header className="site-header york-header">
       <Brand />
       <nav aria-label="Main navigation">
+        {!navItems.some((item) => item.href === "/tm44-air-conditioning-inspections") && <a href="/tm44-air-conditioning-inspections">TM44 inspections</a>}
         {navItems.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
       </nav>
       <a className="header-cta" href={ctaHref}>{ctaLabel} <span aria-hidden="true">↗</span></a>
@@ -98,8 +99,8 @@ export function LocationFooter() {
   return (
     <footer>
       <Brand footer />
-      <p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p>
-      <div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
+      <p>TM44 air conditioning inspections, maintenance and facilities support for buildings and property portfolios.</p>
+      <div><a href="/tm44-air-conditioning-inspections">TM44 inspections &amp; areas</a><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
       <small>© 2026 Air Care UK. All rights reserved.</small>
     </footer>
   );

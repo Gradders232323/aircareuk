@@ -1,3 +1,5 @@
+import { AreaDirectory } from "../_components/coverage-pages";
+import { TM44QuoteSection, TM44PricingSection } from "../_components/tm44-sections";
 import { DirectoryNav } from "../_components/directory-nav";
 import type { Metadata } from "next";
 
@@ -47,8 +49,8 @@ export default function TM44Page() {
     <main className="tm44-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <header className="site-header tm44-header">
-        <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} /></a>
-        <nav aria-label="Main navigation"><a href="/#services">Services</a><a href="#scope">Who needs one?</a><a href="#tm44-faq">FAQs</a></nav>
+        <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a>
+        <nav aria-label="Main navigation"><a href="/tm44-air-conditioning-inspections">TM44 inspections</a><a href="#scope">Who needs one?</a><a href="#tm44-faq">FAQs</a></nav>
         <a className="header-cta" href="#tm44-enquiry">Arrange an inspection <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 
@@ -69,7 +71,7 @@ export default function TM44Page() {
         </div>
       </section>
 
-      <section className="tm44-strip"><span><b>12kW+</b> combined output</span><span><b>5 years</b> maximum interval</span><span><b>1 report</b> lodged on the register</span></section>
+      <section className="tm44-strip"><span><b>Over 12kW</b> combined output</span><span><b>5 years</b> maximum interval</span><span><b>1 report</b> lodged on the register</span></section>
 
       <section className="section tm44-scope" id="scope">
         <div className="section-heading"><div><span className="kicker">Are you in scope?</span><h2>More than one unit<br />can <em>still count.</em></h2></div><p>The threshold applies to the effective rated output of the air conditioning system—not simply to the size of one unit. Units under single control may need to be combined.</p></div>
@@ -106,23 +108,17 @@ export default function TM44Page() {
         <div className="tm44-responsibility-card dark"><span className="kicker light">A clear distinction</span><h3>TM44 is not a substitute for maintenance.</h3><p>Cleaning, repair and control adjustments sit outside the statutory inspection. Regular maintenance should continue on its normal schedule.</p></div>
       </section>
 
+      <TM44PricingSection />
+      <AreaDirectory service="tm44-air-conditioning-inspections" />
+
       <section className="faq section" id="tm44-faq">
         <div className="faq-intro"><span className="kicker">TM44 FAQs</span><h2>Compliance,<br /><em>without fog.</em></h2><p>This page summarises requirements for England and Wales. For a definitive view on your obligations, consult the regulations or independent legal advice.</p><a className="tm44-gov-link" href="https://www.gov.uk/government/publications/air-conditioning-inspections-for-buildings/a-guide-to-air-conditioning-inspections" target="_blank" rel="noreferrer">Read the official GOV.UK guidance ↗</a></div>
         <div className="faq-list">{tm44Faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
       </section>
 
-      <section className="quote-section tm44-enquiry" id="tm44-enquiry">
-        <div className="quote-copy"><span className="kicker light">TM44 inspection enquiry</span><h2>Know where you<br /><em>stand.</em></h2><p>Tell us about the building and its air conditioning. We’ll help scope the inspection and provide a clear quote.</p><a href="mailto:hello@aircareuk.co.uk">Prefer email? <b>hello@aircareuk.co.uk</b></a></div>
-        <form className="quote-form" action="mailto:hello@aircareuk.co.uk" method="post" encType="text/plain">
-          <div className="field-row"><label>Name<input required name="Name" autoComplete="name" placeholder="Your name" /></label><label>Organisation<input name="Organisation" autoComplete="organization" placeholder="Business or organisation" /></label></div>
-          <div className="field-row"><label>Email<input required name="Email" type="email" autoComplete="email" placeholder="you@example.com" /></label><label>Building postcode<input required name="Postcode" autoComplete="postal-code" placeholder="Site postcode" /></label></div>
-          <label>Do you know the combined output?<select name="Combined output" defaultValue=""><option value="" disabled>Select one</option><option>Yes — over 12kW</option><option>Yes — 12kW or below</option><option>No — please help me check</option></select></label>
-          <label>Tell us about the system<textarea name="System details" rows={3} placeholder="Number and type of units, previous report date, available records…" /></label>
-          <button className="button button-mint" type="submit">Request my TM44 quote <span>↗</span></button><small>By submitting, you agree that we may contact you about your enquiry.</small>
-        </form>
-      </section>
+      <TM44QuoteSection id="tm44-enquiry" context="/tm44-air-conditioning-inspections" />
 
-      <footer><a className="brand brand-footer" href="/"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} /></a><p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p><div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div><small>© 2026 Air Care UK. All rights reserved.</small></footer>
+      <footer><a className="brand brand-footer" href="/"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a><p>TM44 air conditioning inspections, maintenance and facilities support for buildings and property portfolios.</p><div><a href="/tm44-air-conditioning-inspections">TM44 inspections &amp; areas</a><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div><small>© 2026 Air Care UK. All rights reserved.</small></footer>
     </main>
   );
 }

@@ -10,15 +10,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: base,
-    title: "Air Care UK | Air Conditioning Specialists",
-    description: "Expert air conditioning inspections, maintenance and servicing for homes and workplaces. Clear advice, upfront pricing and reliable care.",
+    title: "TM44 Air Conditioning Inspections | Air Care UK",
+    description: "TM44 air conditioning inspections, lodged reports and clear inspection quotes. Air conditioning care and facilities support across England.",
     openGraph: {
       title: "Air Care UK",
-      description: "Cleaner air. Lower bills. No surprises.",
+      description: "TM44 inspections. Clear scope. Lodged reports.",
       type: "website",
       images: [{ url: "/og.png", width: 1200, height: 630, alt: "Air Care UK — inspections, maintenance and servicing" }],
     },
-    twitter: { card: "summary_large_image", title: "Air Care UK", description: "Cleaner air. Lower bills. No surprises.", images: ["/og.png"] },
+    twitter: { card: "summary_large_image", title: "Air Care UK", description: "TM44 inspections. Clear scope. Lodged reports.", images: ["/og.png"] },
   };
 }
 

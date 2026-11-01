@@ -10,4 +10,4 @@ export const serviceNames: Record<ServiceKey, string> = {
   "air-conditioning": "Air conditioning",
   "facilities-management": "Facilities management",
 };
-export const allPagePaths = ["/", "/care-plan", "/tm44-air-conditioning-inspections", "/air-conditioning-maintenance-york", "/air-conditioning-servicing-york", "/air-conditioning", "/facilities-management", ...locations.flatMap((location) => [`/air-conditioning/${location.slug}`, `/facilities-management/${location.slug}`])];
+export const allPagePaths = ["/", "/care-plan", "/tm44-air-conditioning-inspections", "/air-conditioning-maintenance-york", "/air-conditioning-servicing-york", "/air-conditioning", "/facilities-management", ...locations.flatMap((location) => [`/air-conditioning/${location.slug}`, `/facilities-management/${location.slug}`, `/tm44-air-conditioning-inspections/${location.slug}`])];

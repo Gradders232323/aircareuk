@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import { TM44QuoteSection, TM44QuickFacts, TM44ScopeSection, TM44ReportSection, TM44ProcessSection, TM44PricingSection, TM44FinalCTA } from "./_components/tm44-sections";
+import { tm44Faqs as faqs, tm44Guidance } from "./_data/tm44";
 import { CoverageIntro } from "./_components/coverage-intro";
 import { DirectoryNav } from "./_components/directory-nav";
 import { ServiceIllustration } from "./_components/service-illustration";
@@ -26,57 +29,71 @@ const services = [
   },
 ];
 
-const faqs = [
-  ["How often should air conditioning be serviced?", "For most systems, once a year is a sensible minimum. Busy commercial systems or units used for both heating and cooling may benefit from servicing every six months."],
-  ["What is included in a service?", "We inspect the indoor and outdoor units, clean key components, check filters, drains, airflow, temperatures and controls, then explain any issues before recommending further work."],
-  ["Do you service all types of system?", "Yes — our service covers common split, multi-split and light commercial air conditioning systems from all major manufacturers."],
-  ["Will you repair anything on the same visit?", "We carry common service parts and can often resolve minor faults immediately. If a larger repair is needed, you will receive a clear quote before any extra work begins."],
-];
+export const metadata: Metadata = {
+  title: "TM44 Air Conditioning Inspections & Quotes | Air Care UK",
+  description: "Arrange a TM44 air conditioning inspection with Air Care UK. Accredited assessment, lodged ACIR and clear quotes across 67 locations in England.",
+  alternates: { canonical: "https://www.aircareuk.co.uk/" },
+  openGraph: { title: "TM44 Air Conditioning Inspections | Air Care UK", description: "Clear scope, accredited assessment and a lodged inspection report. Get a TM44 quote for your building or portfolio.", images: ["/og-tm44.png"], url: "https://www.aircareuk.co.uk/" },
+  twitter: { card: "summary_large_image", title: "TM44 Inspections | Air Care UK", description: "Get a TM44 inspection quote for your building or portfolio.", images: ["/og-tm44.png"] },
+};
 
 export default function Home() {
   return (
-    <main>
+    <main className="tm44-home">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Air Care UK home">
-          <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} />
+          <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} />
         </a>
         <nav aria-label="Main navigation">
-          <a href="#services">Services</a>
-          <a href="/care-plan">Care plan</a>
+          <a href="/tm44-air-conditioning-inspections">TM44 inspections</a>
+          <a href="#scope">Who needs one?</a>
           <a href="#faq">FAQs</a>
         </nav>
-        <a className="header-cta" href="#quote">Get a free quote <span aria-hidden="true">↗</span></a>
+        <a className="header-cta" href="#quote">Get a TM44 quote <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <div className="eyebrow"><span /> Trusted air conditioning specialists</div>
-          <h1>Cleaner air.<br />Lower bills.<br /><em>No surprises.</em></h1>
-          <p>Expert inspections, maintenance and servicing that keeps your air conditioning running smoothly — at home and at work.</p>
+          <div className="eyebrow"><span /> Air conditioning energy inspections</div>
+          <h1>TM44 inspections.<br /><em>Know where you stand.</em></h1>
+          <p>Accredited TM44 air conditioning inspections, a lodged report and clear energy-performance recommendations. Get a quote for your building or property portfolio across 67 areas in England.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#quote">Book an inspection <span>↗</span></a>
-            <a className="text-link" href="tel:+442079460285"><span className="phone-dot">●</span> 020 7946 0285</a>
+            <a className="button button-primary" href="#quote">Get a TM44 quote <span>↗</span></a>
+            <a className="text-link" href="/tm44-air-conditioning-inspections#areas">Find your TM44 area ↓</a>
           </div>
           <div className="trust-row" aria-label="Service benefits">
-            <span>✓ Qualified engineers</span>
-            <span>✓ Upfront pricing</span>
-            <span>✓ Work guaranteed</span>
+            <span>✓ Accredited assessment</span>
+            <span>✓ Lodged ACIR</span>
+            <span>✓ Clear inspection scope</span>
           </div>
         </div>
 
         <div className="hero-visual hero-brand">
-          <img className="hero-brand-logo" src="/air-care-uk-hero.svg" alt="Air Care UK — Air Conditioning, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
+          <img className="hero-brand-logo" src="/air-care-uk-hero.svg" alt="Air Care UK — TM44 &amp; Air Conditioning, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
         </div>
       </section>
 
-      <section className="marquee" aria-label="Service promise">
-        <span>INSPECT</span><i>✦</i><span>MAINTAIN</span><i>✦</i><span>SERVICE</span><i>✦</i><span>BREATHE EASY</span>
+      <TM44QuickFacts />
+      <TM44QuoteSection context="/" />
+      <TM44ScopeSection />
+      <TM44ReportSection />
+      <TM44ProcessSection />
+      <TM44PricingSection />
+      <section className="faq section" id="faq">
+        <div className="faq-intro"><span className="kicker">Useful answers</span><h2>Before you<br /><em>book.</em></h2><p>Find answers about inspection scope, report validity, timing and quotations.</p><a className="tm44-gov-link" href={tm44Guidance} target="_blank" rel="noreferrer">Official GOV.UK guidance ↗</a></div>
+        <div className="faq-list">
+          {faqs.map(([question, answer], index) => (
+            <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>
+          ))}
+        </div>
       </section>
+      <CoverageIntro />
+
 
       <section className="services section" id="services">
         <div className="section-heading">
-          <div><span className="kicker">What we do</span><h2>Good air conditioning<br />starts with <em>good care.</em></h2></div>
-          <p>From a one-off check to year-round maintenance, we make it simple to protect your comfort and your equipment.</p>
+          <div><span className="kicker">Beyond the inspection</span><h2>Good air conditioning<br />starts with <em>good care.</em></h2></div>
+          <p>TM44 is our main focus. Air conditioning servicing, maintenance and facilities support remain available as separately scoped services.</p>
         </div>
         <div className="service-grid">
           {services.map((service) => (
@@ -86,7 +103,7 @@ export default function Home() {
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
               <ul>{service.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              <a href={service.href ?? "#quote"}>{service.href === "/air-conditioning-servicing-york" ? "Servicing in York" : service.href === "/air-conditioning-maintenance-york" ? "Maintenance in York" : service.href ? "Learn more" : "Get a quote"} <span>↗</span></a>
+              <a href={service.href ?? "#quote"}>{service.href === "/air-conditioning-servicing-york" ? "Servicing in York" : service.href === "/air-conditioning-maintenance-york" ? "Maintenance in York" : service.href === "/tm44-air-conditioning-inspections" ? "TM44 inspection guide" : service.href ? "Learn more" : "Get a quote"} <span>↗</span></a>
             </article>
           ))}
         </div>
@@ -128,33 +145,12 @@ export default function Home() {
         <div className="quote-author"><span>JM</span><div><b>James M.</b><small>Office manager · London</small></div><em>★★★★★</em></div>
       </section>
 
-      <section className="faq section" id="faq">
-        <div className="faq-intro"><span className="kicker">Useful answers</span><h2>Before you<br /><em>book.</em></h2><p>Still unsure what your system needs? Call us and we’ll point you in the right direction.</p></div>
-        <div className="faq-list">
-          {faqs.map(([question, answer], index) => (
-            <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>
-          ))}
-        </div>
-      </section>
-
-      <CoverageIntro />
-
-      <section className="quote-section" id="quote">
-        <div className="quote-copy"><span className="kicker light">Free, no-pressure quote</span><h2>Ready for air that<br /><em>just feels better?</em></h2><p>Tell us what you need. We’ll come back with the right service and a clear price.</p><a href="tel:+442079460285">Prefer to talk? <b>020 7946 0285</b></a></div>
-        <form className="quote-form" action="mailto:hello@aircareuk.co.uk" method="post" encType="text/plain">
-          <div className="field-row"><label>Name<input required name="Name" autoComplete="name" placeholder="Your name" /></label><label>Phone<input required name="Phone" type="tel" autoComplete="tel" placeholder="Best number" /></label></div>
-          <label>Email<input required name="Email" type="email" autoComplete="email" placeholder="you@example.com" /></label>
-          <label>What can we help with?<select name="Service" defaultValue=""><option value="" disabled>Select a service</option><option>Air conditioning inspection</option><option>Air conditioning maintenance</option><option>Air conditioning servicing</option><option>Not sure yet</option></select></label>
-          <label>Anything else?<textarea name="Message" rows={3} placeholder="Type of system, number of units, or the issue you’ve noticed…" /></label>
-          <button className="button button-mint" type="submit">Request my quote <span>↗</span></button>
-          <small>By submitting, you agree that we may contact you about your enquiry.</small>
-        </form>
-      </section>
+      <TM44FinalCTA />
 
       <footer>
-        <a className="brand brand-footer" href="#top"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} /></a>
-        <p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p>
-        <div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="tel:+442079460285">020 7946 0285</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
+        <a className="brand brand-footer" href="#top"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a>
+        <p>TM44 air conditioning inspections, maintenance and facilities support for buildings and property portfolios.</p>
+        <div><a href="/tm44-air-conditioning-inspections">TM44 inspections &amp; areas</a><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="tel:+442079460285">020 7946 0285</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
         <small>© 2026 Air Care UK. All rights reserved.</small>
       </footer>
     </main>

@@ -51,8 +51,8 @@ export default function CarePlanPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(planSchema) }} />
 
       <header className="site-header care-header">
-        <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} /></a>
-        <nav aria-label="Main navigation"><a href="/#services">Services</a><a href="#included">What’s included</a><a href="#plan-faq">FAQs</a></nav>
+        <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a>
+        <nav aria-label="Main navigation"><a href="/tm44-air-conditioning-inspections">TM44 inspections</a><a href="/#services">Services</a><a href="#included">What’s included</a><a href="#plan-faq">FAQs</a></nav>
         <a className="header-cta" href="#plan-enquiry">Ask about a plan <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 
@@ -117,7 +117,7 @@ export default function CarePlanPage() {
         </form>
       </section>
 
-      <footer><a className="brand brand-footer" href="/"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} /></a><p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p><div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div><small>© 2026 Air Care UK. All rights reserved.</small></footer>
+      <footer><a className="brand brand-footer" href="/"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a><p>TM44 air conditioning inspections, maintenance and facilities support for buildings and property portfolios.</p><div><a href="/tm44-air-conditioning-inspections">TM44 inspections &amp; areas</a><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div><small>© 2026 Air Care UK. All rights reserved.</small></footer>
     </main>
   );
 }

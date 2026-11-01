@@ -303,3 +303,40 @@ footer::before { content:"INSPECT  ✦  MAINTAIN  ✦  SERVICE  ✦  BREATHE EAS
 .field-row { grid-template-columns:repeat(2,minmax(0,1fr)); }
 @media (max-width:900px) { .quote-section { grid-template-columns:minmax(0,1fr); } }
 @media (max-width:600px) { .field-row { grid-template-columns:minmax(0,1fr); } }
+
+/* TM44 is the primary enquiry journey; existing service pages remain available. */
+.tm44-home .hero h1 { font-size:clamp(64px,6.4vw,94px); }
+.tm44-home .hero h1 em { font-size:.69em; }
+.tm44-home .hero-copy>p { max-width:560px; }
+.tm44-priority-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; padding:24px clamp(22px,7vw,110px); background:var(--red); color:var(--paper); border-block:4px double var(--paper); }
+.tm44-priority-strip span { font-size:12px; line-height:1.6; }
+.tm44-priority-strip b { display:block; font:700 29px/1.25 var(--display); text-transform:uppercase; letter-spacing:.025em; }
+.tm44-quote-points { list-style:none; padding:0; margin:28px 0; }
+.tm44-quote-points li { position:relative; padding:13px 0 13px 22px; border-bottom:1px solid rgba(231,197,143,.24); font-size:14px; line-height:1.6; }
+.tm44-quote-points li::before { content:"✓"; position:absolute; left:0; color:var(--gold); }
+.tm44-quote-form { gap:17px; align-self:start; }
+.tm44-quote-form .field-row label { min-width:0; }
+.tm44-quote-form input,.tm44-quote-form select,.tm44-quote-form textarea { letter-spacing:0; text-transform:none; font-size:13px; }
+.tm44-quote-form>small { line-height:1.7; text-align:left; font-size:11px; color:#52616a; }
+.tm44-draft-status { background:#efe1c5; padding:16px; font-size:13px; line-height:1.7; }
+.tm44-draft-status a { text-decoration:underline; text-underline-offset:3px; color:var(--red); }
+.tm44-conversion .quote-copy .tm44-enquiry-note { font-size:13px; }
+.tm44-source-link { margin:28px 0 0; font-size:12px; line-height:1.8; color:var(--muted); }
+.tm44-source-link a { color:var(--red); text-decoration:underline; text-underline-offset:3px; }
+.tm44-price-section { background:#efe1c5; }
+.tm44-pricing-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; }
+.tm44-pricing-grid article { border-top:3px solid var(--red); padding:24px 20px; background:var(--white); }
+.tm44-pricing-grid article>span { font:italic 16px Georgia,serif; color:var(--red); }
+.tm44-pricing-grid h3 { font-size:28px; margin:22px 0 14px; }
+.tm44-pricing-grid p { color:var(--muted); font-size:13px; line-height:1.8; }
+.tm44-deliverables { grid-template-columns:repeat(4,minmax(0,1fr)); margin-bottom:34px; }
+.tm44-deliverables h3 { font-size:29px; }
+.tm44-supporting-links { margin-top:32px; }
+.directory-nav-primary { color:var(--gold); }
+@media (max-width:1100px) and (min-width:901px) { .site-header nav { gap:18px; font-size:10px; } }
+@media (max-width:900px) { .tm44-pricing-grid,.tm44-deliverables { grid-template-columns:repeat(2,minmax(0,1fr)); } .tm44-home .hero h1 { font-size:clamp(62px,9vw,86px); } }
+@media (max-width:600px) { .tm44-home .hero h1 { font-size:clamp(53px,14vw,72px); } .tm44-priority-strip { grid-template-columns:1fr; gap:16px; } .tm44-priority-strip span { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; } .tm44-priority-strip b { font-size:24px; } .tm44-pricing-grid,.tm44-deliverables { grid-template-columns:1fr; } .tm44-priority-scope .section-heading h2 { font-size:44px; } .tm44-quote-form { padding:25px 20px; } }
+.tm44-final-cta { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:30px; padding:60px clamp(22px,7vw,110px); background:var(--gold); border-top:1px solid var(--navy); }
+.tm44-final-cta h2 { font-size:clamp(42px,4.5vw,64px); line-height:1.05; margin:15px 0 0; }
+footer::before { content:"TM44 INSPECTIONS  ✦  LODGED REPORTS  ✦  AIR CONDITIONING CARE"; }
+@media (max-width:600px) { .tm44-final-cta { padding:45px 22px; } .tm44-final-cta .button { max-width:100%; font-size:11px; } }
