@@ -1,3 +1,12 @@
+const serviceLinks = [
+  { href: "/tm44-air-conditioning-inspections", label: "TM44" },
+  { href: "/air-conditioning-servicing", label: "Servicing" },
+  { href: "/air-conditioning-installations", label: "Installations" },
+  { href: "/air-conditioning-repairs", label: "Repairs" },
+];
+export function MainNav() {
+  return <nav aria-label="Main navigation">{serviceLinks.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}</nav>;
+}
 export function DirectoryNav() {
-  return <nav className="directory-nav" aria-label="Services and coverage"><a className="directory-nav-primary" href="/tm44-air-conditioning-inspections">TM44 inspections</a><span aria-hidden="true">✦</span><a href="/tm44-air-conditioning-inspections#areas">Find your TM44 area</a><span aria-hidden="true">✦</span><a href="/air-conditioning">Air conditioning</a><span aria-hidden="true">✦</span><a href="/facilities-management">Facilities management</a></nav>;
+  return <nav className="directory-nav" aria-label="Mobile service navigation">{serviceLinks.map((link, index) => <a className={index === 0 ? "directory-nav-primary" : undefined} key={link.href} href={link.href}>{link.label}</a>)}</nav>;
 }

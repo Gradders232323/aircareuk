@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const locations = JSON.parse(fs.readFileSync('app/_data/locations.json', 'utf8'));
 const base = process.env.CHECK_SITE_URL || 'http://127.0.0.1:3217';
-const paths = ['/', '/care-plan', '/tm44-air-conditioning-inspections', '/air-conditioning-maintenance-york', '/air-conditioning-servicing-york', '/air-conditioning', '/facilities-management', ...locations.flatMap(l => [`/air-conditioning/${l.slug}`, `/facilities-management/${l.slug}`, `/tm44-air-conditioning-inspections/${l.slug}`])];
+const paths = ['/air-conditioning-servicing', '/air-conditioning-installations', '/air-conditioning-repairs', '/', '/care-plan', '/tm44-air-conditioning-inspections', '/air-conditioning-maintenance-york', '/air-conditioning-servicing-york', '/air-conditioning', '/facilities-management', ...locations.flatMap(l => [`/air-conditioning/${l.slug}`, `/facilities-management/${l.slug}`, `/tm44-air-conditioning-inspections/${l.slug}`])];
 (async () => {
   assert.equal(locations.length, 67);
   assert.equal(new Set(locations.map(l => l.slug)).size, 67);
@@ -17,6 +17,9 @@ const paths = ['/', '/care-plan', '/tm44-air-conditioning-inspections', '/air-co
       assert.equal(response.status, 200, path);
       const html = await response.text();
       assert.equal((html.match(/<h1\b/g) || []).length, 1, path);
+      const mainNav = html.match(/<nav aria-label="Main navigation">([\s\S]*?)<\/nav>/);
+      assert(mainNav, 'Missing main nav ' + path);
+      assert.deepEqual([...mainNav[1].matchAll(/<a[^>]*href="([^"]+)"[^>]*>(.*?)<\/a>/g)].map(m => [m[2],m[1]]), [['TM44','/tm44-air-conditioning-inspections'],['Servicing','/air-conditioning-servicing'],['Installations','/air-conditioning-installations'],['Repairs','/air-conditioning-repairs']], 'Navigation ' + path);
       const hero = html.match(/<section[^>]*class="[^"]*hero[^"]*"[^>]*>([\s\S]*?)<\/section>/);
       assert(hero && hero[1].includes('src="/air-care-uk-hero.svg"'), 'Missing hero logo ' + path);
       assert(urls.includes('https://www.aircareuk.co.uk' + path), 'Missing sitemap entry ' + path);

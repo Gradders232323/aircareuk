@@ -1,4 +1,4 @@
-import { DirectoryNav } from "./directory-nav";
+import { DirectoryNav, MainNav } from "./directory-nav";
 import type { ReactNode } from "react";
 
 type NavItem = {
@@ -38,14 +38,11 @@ function Brand({ footer = false }: { footer?: boolean }) {
   );
 }
 
-export function LocationHeader({ ctaHref, ctaLabel, navItems }: LocationHeaderProps) {
+export function LocationHeader({ ctaHref, ctaLabel }: LocationHeaderProps) {
   return (
     <><header className="site-header york-header">
       <Brand />
-      <nav aria-label="Main navigation">
-        {!navItems.some((item) => item.href === "/tm44-air-conditioning-inspections") && <a href="/tm44-air-conditioning-inspections">TM44 inspections</a>}
-        {navItems.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
-      </nav>
+      <MainNav />
       <a className="header-cta" href={ctaHref}>{ctaLabel} <span aria-hidden="true">↗</span></a>
     </header><DirectoryNav /></>
   );

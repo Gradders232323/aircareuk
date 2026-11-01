@@ -1,5 +1,5 @@
 import { HeroLogo } from "../_components/hero-logo";
-import { DirectoryNav } from "../_components/directory-nav";
+import { DirectoryNav, MainNav } from "../_components/directory-nav";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export default function CarePlanPage() {
 
       <header className="site-header care-header">
         <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a>
-        <nav aria-label="Main navigation"><a href="/tm44-air-conditioning-inspections">TM44 inspections</a><a href="/#services">Services</a><a href="#included">What’s included</a><a href="#plan-faq">FAQs</a></nav>
+        <MainNav />
         <a className="header-cta" href="#plan-enquiry">Ask about a plan <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 

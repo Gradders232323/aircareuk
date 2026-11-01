@@ -1,7 +1,7 @@
 import { HeroLogo } from "../_components/hero-logo";
 import { AreaDirectory } from "../_components/coverage-pages";
 import { TM44QuoteSection, TM44PricingSection } from "../_components/tm44-sections";
-import { DirectoryNav } from "../_components/directory-nav";
+import { DirectoryNav, MainNav } from "../_components/directory-nav";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export default function TM44Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <header className="site-header tm44-header">
         <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a>
-        <nav aria-label="Main navigation"><a href="/tm44-air-conditioning-inspections">TM44 inspections</a><a href="#scope">Who needs one?</a><a href="#tm44-faq">FAQs</a></nav>
+        <MainNav />
         <a className="header-cta" href="#tm44-enquiry">Arrange an inspection <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 

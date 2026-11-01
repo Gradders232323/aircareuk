@@ -345,3 +345,8 @@ footer::before { content:"TM44 INSPECTIONS  ✦  LODGED REPORTS  ✦  AIR CONDIT
 .hero-logo-panel { display:flex; align-items:center; justify-content:center; min-width:0; padding:40px 28px; background:var(--paper); }
 @media (max-width:900px) { .hero-logo-panel { padding:10px 24px 45px; } .hero-logo-panel .hero-logo-art { max-width:480px; } }
 @media (max-width:600px) { .hero-logo-panel { padding:0 22px 35px; } .hero-logo-panel .hero-logo-art { max-width:370px; } }
+/* The same four service destinations on desktop and mobile. */
+@media (min-width:901px) { .directory-nav { display:none; } }
+@media (max-width:900px) { .directory-nav { display:flex; flex-wrap:nowrap; justify-content:center; gap:clamp(14px,4vw,32px); } .directory-nav>a:last-child { flex-basis:auto; } }
+@media (max-width:400px) { .directory-nav { gap:16px; padding-inline:14px; font-size:10px; } }
+.coverage-editorial .coverage-related-services>a { color:var(--gold); border-color:var(--gold); }

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { TM44QuoteSection, TM44QuickFacts, TM44ScopeSection, TM44ReportSection, TM44ProcessSection, TM44PricingSection, TM44FinalCTA } from "./_components/tm44-sections";
 import { tm44Faqs as faqs, tm44Guidance } from "./_data/tm44";
 import { CoverageIntro } from "./_components/coverage-intro";
-import { DirectoryNav } from "./_components/directory-nav";
+import { DirectoryNav, MainNav } from "./_components/directory-nav";
 import { ServiceIllustration } from "./_components/service-illustration";
 
 const services = [
@@ -45,11 +45,7 @@ export default function Home() {
         <a className="brand" href="#top" aria-label="Air Care UK home">
           <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} />
         </a>
-        <nav aria-label="Main navigation">
-          <a href="/tm44-air-conditioning-inspections">TM44 inspections</a>
-          <a href="#scope">Who needs one?</a>
-          <a href="#faq">FAQs</a>
-        </nav>
+        <MainNav />
         <a className="header-cta" href="#quote">Get a TM44 quote <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 
