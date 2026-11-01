@@ -117,3 +117,10 @@ footer { background:#0a2024;color:white;padding:45px clamp(22px,7vw,110px);displ
   .site-header { min-height:108px; gap:12px; padding-top:8px; padding-bottom:8px; }
   .brand-logo { width:96px; height:96px; }
 }
+
+/* Main homepage hero: approved transparent vector artwork. */
+.hero-visual.hero-brand { background:var(--paper); padding:36px 28px; }
+.hero-visual.hero-brand::before { display:none; }
+.hero-brand-logo { display:block; width:min(100%,680px); height:auto; object-fit:contain; }
+@media (max-width:900px) { .hero-visual.hero-brand { min-height:0; padding:0 24px 48px; } .hero-brand-logo { width:min(100%,540px); } }
+@media (max-width:600px) { .hero-visual.hero-brand { min-height:0; padding:0 16px 32px; } }

@@ -60,19 +60,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Air conditioning service overview">
-          <div className="airflow airflow-one" /><div className="airflow airflow-two" /><div className="airflow airflow-three" />
-          <div className="unit">
-            <div className="unit-top"><span>Air Care UK</span><b>21°</b></div>
-            <div className="unit-vent"><i /><i /><i /><i /><i /></div>
-            <div className="unit-status"><span className="status-light" /> Quiet comfort mode</div>
-          </div>
-          <div className="service-card">
-            <span className="service-card-label">Next available</span>
-            <strong>Tomorrow</strong>
-            <small>Flexible 2-hour arrival window</small>
-          </div>
-          <div className="efficiency-pill"><b>A+</b><span>Efficiency<br />optimised</span></div>
+        <div className="hero-visual hero-brand">
+          <img className="hero-brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Heating &amp; Cooling, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
         </div>
       </section>
 
