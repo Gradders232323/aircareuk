@@ -360,3 +360,50 @@ footer::before { content:"TM44 INSPECTIONS  ✦  LODGED REPORTS  ✦  AIR CONDIT
 .dedicated-quote-page .quote-page-hero { padding-top:40px; padding-bottom:45px; }
 .dedicated-quote-page .quote-page-hero h1 { font-size:clamp(54px,5.6vw,80px); }
 @media (max-width:600px) { .quote-page-card { padding:27px 22px; } .quote-page-card h3 { font-size:36px; } .dedicated-quote-page .quote-page-hero h1 { font-size:49px; } }
+
+/* A quieter brand treatment: retain the badge and palette, simplify the page. */
+main::after { display:none; }
+h1,h2,h3 { text-shadow:none; }
+h1 em,h2 em,.quote-page-card h3 em { font-family:inherit; font-style:normal; font-size:1em; letter-spacing:inherit; text-transform:inherit; line-height:inherit; }
+.site-header { border-top-width:3px; border-bottom:1px solid var(--line); min-height:112px; }
+.header-cta,.button { box-shadow:none; border-radius:5px; }
+.header-cta:hover,.button:hover { box-shadow:none; }
+.hero { min-height:490px; }
+.hero-copy { padding-top:40px; padding-bottom:40px; }
+.hero h1,.tm44-home .hero h1 { font-size:clamp(52px,5vw,74px); line-height:1.03; }
+.hero h1 em,.tm44-home .hero h1 em { font-size:1em; }
+.hero-brand-logo,.hero-logo-art { max-width:470px; margin-inline:auto; }
+.coverage-hero { gap:40px; padding-top:40px; padding-bottom:44px; }
+.coverage-hero h1,.dedicated-quote-page .quote-page-hero h1 { font-size:clamp(46px,4.4vw,64px); line-height:1.06; margin-block:20px; }
+.coverage-hero h1 em { font-size:1em; }
+.coverage-hero .breadcrumb { margin-bottom:20px; }
+.york-hero,.cp-hero,.tm44-hero { min-height:0; border-bottom:1px solid var(--line); }
+.york-hero-copy,.cp-hero-copy,.tm44-hero-copy { padding-top:44px; padding-bottom:44px; }
+.york-hero h1,.cp-hero h1,.tm44-hero h1 { font-size:clamp(46px,4.6vw,66px); line-height:1.06; }
+.hero-logo-panel { min-height:0; padding:28px; border:0; background:var(--paper); }
+.hero-logo-panel::before { display:none; }
+.section { padding-top:68px; padding-bottom:68px; }
+.section-heading h2,.care-plan h2,.faq h2,.quote-section h2,.coverage-editorial h2,.coverage-local-note h2,.tm44-final-cta h2 { font-size:clamp(36px,3.6vw,50px); line-height:1.1; }
+.section-heading h2 em,.care-plan h2 em,.faq h2 em,.quote-section h2 em { font-size:1em; }
+.marquee,.cp-strip,.york-proof-strip,.tm44-strip,.coverage-ribbon,.tm44-priority-strip { border:0; }
+.tm44-priority-strip { background:var(--navy); padding-top:22px; padding-bottom:22px; }
+.tm44-priority-strip b { font-size:25px; }
+.coverage-ribbon { background:var(--navy); font-size:18px; letter-spacing:.035em; }
+.process-grid,.cp-cycle-grid,.tm44-process-grid,.faq-list { border-top:1px solid var(--line); }
+.service-item,.coverage-region { border-color:var(--line); border-top:2px solid var(--red); border-radius:5px; }
+.service-item:hover { transform:none; }
+.york-check-grid article,.cp-inclusion-grid article,.tm44-scope-grid article,.tm44-pricing-grid article { border-top-width:2px; }
+.coverage-related,.coverage-intro,.tm44-price-section { background:#f0eee7; }
+.tm44-final-cta { background:#edf1f3; border-top:1px solid var(--line); }
+.maintenance-frequency { background:#edf1f3; border-block:1px solid var(--line); }
+.testimonial { background:#f0eee7; border-color:var(--line); }
+.metric-core,.cp-calendar { border:1px solid var(--line); outline:0; box-shadow:none; }
+.york-ticket,.cp-plan-card,.tm44-report { box-shadow:none; }
+.quote-page-card { border-top:2px solid var(--red); border-radius:5px; }
+.quote-page-card h3 { font-size:32px; line-height:1.12; }
+.quote-form { border-color:#d7dfe3; border-radius:6px; background:#fff; }
+.quote-form input,.quote-form select,.quote-form textarea { background:#fff; border-color:#a7b1b8; border-radius:4px; }
+footer::before { background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,.16); font:700 12px/1.7 "DM Sans",sans-serif; letter-spacing:.06em; padding-block:20px; }
+@media (max-width:1000px) { .coverage-hero>img { max-width:340px; } }
+@media (max-width:900px) { .site-header { min-height:98px; } .hero { min-height:0; } .hero h1,.tm44-home .hero h1 { font-size:clamp(48px,7vw,66px); } .hero-copy { padding-top:34px; padding-bottom:18px; } .hero-visual.hero-brand { padding-bottom:28px; } .hero-logo-panel { padding:0 24px 28px; } .hero-logo-panel .hero-logo-art,.hero-brand-logo { max-width:360px; } }
+@media (max-width:600px) { .site-header { min-height:94px; } .section { padding-top:48px; padding-bottom:48px; } .hero h1,.tm44-home .hero h1 { font-size:clamp(43px,11.2vw,58px); } .hero-copy { padding-top:30px; } .hero-logo-art,.hero-brand-logo,.hero-logo-panel .hero-logo-art,.coverage-hero>img { max-width:290px; } .coverage-hero { padding-top:28px; padding-bottom:30px; gap:22px; } .coverage-hero h1,.dedicated-quote-page .quote-page-hero h1,.york-hero h1,.cp-hero h1,.tm44-hero h1 { font-size:clamp(39px,10vw,50px); } .york-hero-copy,.cp-hero-copy,.tm44-hero-copy { padding-top:32px; padding-bottom:24px; } .section-heading h2,.care-plan h2,.faq h2,.quote-section h2,.coverage-intro .section-heading h2,.tm44-priority-scope .section-heading h2 { font-size:36px; } .tm44-final-cta { padding-block:38px; } .quote-page-card h3 { font-size:30px; } footer::before { font-size:10px; letter-spacing:.025em; } }
