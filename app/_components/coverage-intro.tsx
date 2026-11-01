@@ -1,0 +1,4 @@
+import { locations, regions, regionId } from "../_data/coverage";
+export function CoverageIntro() {
+  return <section className="section coverage-intro"><div className="section-heading"><div><span className="kicker">Our services. Your area.</span><h2>Air conditioning &amp;<br />facilities management.<br /><em>Across England.</em></h2></div><p>Explore support for your home, workplace or property portfolio. Find service information and enquiry details for 67 locations across nine regions.</p></div><div className="coverage-related-services"><a href="/air-conditioning">Explore air conditioning ↗</a><a href="/facilities-management">Explore facilities management ↗</a></div><div className="coverage-intro-regions">{regions.map((region) => <a key={region} href={`/air-conditioning#${regionId(region)}`}><strong>{region}</strong><span>{locations.filter((location) => location.region === region).length} locations ↗</span></a>)}</div></section>;
+}

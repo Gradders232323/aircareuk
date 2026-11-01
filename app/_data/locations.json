@@ -1,0 +1,471 @@
+[
+  {
+    "region": "London",
+    "name": "London",
+    "slug": "london",
+    "focus": "Occupied offices and mixed-use buildings",
+    "note": "Plan access to indoor units around meetings and visitor hours; record who controls shared outdoor equipment and whether landlord approval is needed."
+  },
+  {
+    "region": "South East",
+    "name": "Brighton & Hove",
+    "slug": "brighton-and-hove",
+    "focus": "Guest rooms and customer-facing spaces",
+    "note": "Separate guest-room access from shared-area servicing, and identify equipment that must remain available during trading hours."
+  },
+  {
+    "region": "South East",
+    "name": "Portsmouth",
+    "slug": "portsmouth",
+    "focus": "Shared premises and commercial units",
+    "note": "Record the equipment serving each tenancy so that maintenance instructions and repair approvals reach the right person."
+  },
+  {
+    "region": "South East",
+    "name": "Southampton",
+    "slug": "southampton",
+    "focus": "Offices and operational buildings",
+    "note": "List occupied rooms and operational areas separately, including any equipment that cannot be switched off during a normal working day."
+  },
+  {
+    "region": "South East",
+    "name": "Reading",
+    "slug": "reading",
+    "focus": "Office floors and meeting rooms",
+    "note": "Include meeting-room booking patterns in your enquiry so checks can be arranged when equipment and spaces are available."
+  },
+  {
+    "region": "South East",
+    "name": "Oxford",
+    "slug": "oxford",
+    "focus": "Teaching rooms and professional premises",
+    "note": "Identify rooms with restricted access and share term-time or appointment schedules before a maintenance visit is arranged."
+  },
+  {
+    "region": "South East",
+    "name": "Milton Keynes",
+    "slug": "milton-keynes",
+    "focus": "Business premises and multi-unit systems",
+    "note": "Group indoor and outdoor units by system, noting which areas each serves and any known control or temperature complaints."
+  },
+  {
+    "region": "South East",
+    "name": "Guildford",
+    "slug": "guildford",
+    "focus": "Professional offices and smaller premises",
+    "note": "Provide the number of occupied rooms, the indoor-unit types and the hours when an engineer can work without interrupting appointments."
+  },
+  {
+    "region": "South East",
+    "name": "Woking",
+    "slug": "woking",
+    "focus": "Managed buildings and shared workplaces",
+    "note": "Confirm whether enquiries are handled by the occupier, managing agent or building owner, particularly where several tenants share plant."
+  },
+  {
+    "region": "South East",
+    "name": "Basingstoke",
+    "slug": "basingstoke",
+    "focus": "Workplaces with regular operating hours",
+    "note": "Share start-up and closing times so maintenance plans reflect the hours your equipment actually runs, rather than a standard assumed schedule."
+  },
+  {
+    "region": "South East",
+    "name": "Maidstone",
+    "slug": "maidstone",
+    "focus": "Customer-facing and back-office spaces",
+    "note": "Describe comfort problems in public areas separately from those in staff rooms, so the service brief covers both uses."
+  },
+  {
+    "region": "South East",
+    "name": "Canterbury",
+    "slug": "canterbury",
+    "focus": "Hospitality and education premises",
+    "note": "Note busy visitor periods and rooms that are difficult to release; this helps shape a practical sequence for servicing."
+  },
+  {
+    "region": "South East",
+    "name": "High Wycombe",
+    "slug": "high-wycombe",
+    "focus": "Commercial units and office accommodation",
+    "note": "Check where the outdoor equipment is located and whether keys, permits or an escort are needed to reach it."
+  },
+  {
+    "region": "South West",
+    "name": "Bristol",
+    "slug": "bristol",
+    "focus": "Mixed commercial property portfolios",
+    "note": "Create a separate equipment list for each address and identify a named contact who can authorise access and explain outstanding faults."
+  },
+  {
+    "region": "South West",
+    "name": "Bath",
+    "slug": "bath",
+    "focus": "Existing buildings with access constraints",
+    "note": "Include photographs of unit positions and access routes so the visit can be planned around the building layout and occupied spaces."
+  },
+  {
+    "region": "South West",
+    "name": "Swindon",
+    "slug": "swindon",
+    "focus": "Operational premises and office space",
+    "note": "Identify units serving critical rooms and list any operating windows that must be protected while other equipment is checked."
+  },
+  {
+    "region": "South West",
+    "name": "Gloucester",
+    "slug": "gloucester",
+    "focus": "Retail premises and workplaces",
+    "note": "Provide opening hours and the best route to outdoor plant, including any shared service yards or locked access points."
+  },
+  {
+    "region": "South West",
+    "name": "Cheltenham",
+    "slug": "cheltenham",
+    "focus": "Offices and appointment-led businesses",
+    "note": "Let us know which rooms can be released together and which need a phased approach to reduce disruption to booked appointments."
+  },
+  {
+    "region": "South West",
+    "name": "Exeter",
+    "slug": "exeter",
+    "focus": "Commercial premises and managed estates",
+    "note": "For a group of buildings, identify the service priority at each address and whether the same approval process applies across the estate."
+  },
+  {
+    "region": "South West",
+    "name": "Plymouth",
+    "slug": "plymouth",
+    "focus": "Occupied buildings and distributed equipment",
+    "note": "Include a simple room-and-unit schedule so an engineer can locate equipment and relate reported faults to the correct system."
+  },
+  {
+    "region": "South West",
+    "name": "Bournemouth",
+    "slug": "bournemouth",
+    "focus": "Guest accommodation and public spaces",
+    "note": "Separate bedroom, reception and staff-area requirements, with access windows for spaces that remain occupied during the day."
+  },
+  {
+    "region": "East of England",
+    "name": "Cambridge",
+    "slug": "cambridge",
+    "focus": "Offices and controlled-access rooms",
+    "note": "Flag restricted areas and any sign-in or induction requirements; provide a contact who can accompany the engineer where needed."
+  },
+  {
+    "region": "East of England",
+    "name": "Peterborough",
+    "slug": "peterborough",
+    "focus": "Business units and customer-facing premises",
+    "note": "Describe the areas affected by poor heating or cooling, including whether the issue occurs all day or only at particular times."
+  },
+  {
+    "region": "East of England",
+    "name": "Norwich",
+    "slug": "norwich",
+    "focus": "Commercial buildings and local portfolios",
+    "note": "Keep an address-by-address record of unit condition, previous work and unresolved faults so future visits have a clear starting point."
+  },
+  {
+    "region": "East of England",
+    "name": "Ipswich",
+    "slug": "ipswich",
+    "focus": "Offices and shared commercial buildings",
+    "note": "Confirm responsibility for each system and whether filters, drains or outdoor equipment are managed under a separate agreement."
+  },
+  {
+    "region": "East of England",
+    "name": "Colchester",
+    "slug": "colchester",
+    "focus": "Retail and professional premises",
+    "note": "Mention restricted parking, delivery periods and any rooms that cannot be accessed during customer appointments."
+  },
+  {
+    "region": "East of England",
+    "name": "Chelmsford",
+    "slug": "chelmsford",
+    "focus": "Office accommodation and managed property",
+    "note": "Provide existing service records where available and identify changes in occupancy or room use since the previous visit."
+  },
+  {
+    "region": "East of England",
+    "name": "Luton",
+    "slug": "luton",
+    "focus": "Busy operational premises",
+    "note": "Tell us when staff arrive and leave, and identify equipment that continues running outside normal office hours."
+  },
+  {
+    "region": "East of England",
+    "name": "Bedford",
+    "slug": "bedford",
+    "focus": "Small commercial buildings and estates",
+    "note": "List each system separately, including approximate age if known, to help distinguish routine servicing from investigation of recurring faults."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Birmingham",
+    "slug": "birmingham",
+    "focus": "Multi-floor offices and mixed-use premises",
+    "note": "Provide floor plans or unit locations where possible, with separate access arrangements for occupied floors and shared plant areas."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Coventry",
+    "slug": "coventry",
+    "focus": "Commercial workplaces and operational areas",
+    "note": "Explain how room temperatures affect the working day and flag any areas where shutdowns need to be coordinated in advance."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Wolverhampton",
+    "slug": "wolverhampton",
+    "focus": "Commercial units and managed property",
+    "note": "Record the model or asset number on faulty equipment so a reported issue can be linked to the correct unit before attendance."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Walsall",
+    "slug": "walsall",
+    "focus": "Shops and occupied workplaces",
+    "note": "Share opening hours and identify whether checks can be completed during trading or need to be phased around customers and staff."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Dudley",
+    "slug": "dudley",
+    "focus": "Business premises and mixed equipment estates",
+    "note": "Note the types of indoor units at the property and whether different areas have separate controls or shared outdoor equipment."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Solihull",
+    "slug": "solihull",
+    "focus": "Office suites and appointment-led premises",
+    "note": "Prioritise rooms with repeated complaints and explain whether the problem is noise, airflow, temperature or control settings."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Worcester",
+    "slug": "worcester",
+    "focus": "Commercial buildings and care arrangements",
+    "note": "Bring together the previous service date, current faults and preferred visit windows to create a practical brief for ongoing support."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Stoke-on-Trent",
+    "slug": "stoke-on-trent",
+    "focus": "Workplaces with varied operating patterns",
+    "note": "Record whether each area runs on shifts, normal office hours or occasional use, so maintenance planning reflects the load on equipment."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Telford",
+    "slug": "telford",
+    "focus": "Business units and operational buildings",
+    "note": "Identify safe routes to indoor and outdoor units and flag any work areas requiring a site induction or escorted access."
+  },
+  {
+    "region": "West Midlands",
+    "name": "Shrewsbury",
+    "slug": "shrewsbury",
+    "focus": "Customer-facing premises and existing buildings",
+    "note": "Include details of access through occupied rooms and any limitations on bringing equipment or tools through public areas."
+  },
+  {
+    "region": "East Midlands",
+    "name": "Nottingham",
+    "slug": "nottingham",
+    "focus": "Offices and multi-occupancy buildings",
+    "note": "Clarify which systems serve your space and which are controlled centrally, especially when reporting an issue through a managing agent."
+  },
+  {
+    "region": "East Midlands",
+    "name": "Leicester",
+    "slug": "leicester",
+    "focus": "Retail and commercial property portfolios",
+    "note": "Group enquiries by address and service need so recurring maintenance can be separated from urgent faults requiring investigation."
+  },
+  {
+    "region": "East Midlands",
+    "name": "Derby",
+    "slug": "derby",
+    "focus": "Operational workplaces and offices",
+    "note": "Flag equipment serving rooms with continuous use and explain which checks can be carried out during normal operation."
+  },
+  {
+    "region": "East Midlands",
+    "name": "Northampton",
+    "slug": "northampton",
+    "focus": "Business premises and managed estates",
+    "note": "Provide an inventory that distinguishes tenant equipment from shared building plant, with the approval contact for each."
+  },
+  {
+    "region": "East Midlands",
+    "name": "Lincoln",
+    "slug": "lincoln",
+    "focus": "Professional premises and visitor spaces",
+    "note": "Note visiting hours and rooms with scheduled appointments so access can be arranged without unnecessary interruption."
+  },
+  {
+    "region": "East Midlands",
+    "name": "Chesterfield",
+    "slug": "chesterfield",
+    "focus": "Commercial units and smaller buildings",
+    "note": "Describe any recent changes in airflow, noise or drainage and include photographs if there are visible signs of a problem."
+  },
+  {
+    "region": "East Midlands",
+    "name": "Mansfield",
+    "slug": "mansfield",
+    "focus": "Retail premises and workplaces",
+    "note": "Share the number of systems, their normal operating hours and any differences between busy and quiet periods."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "Leeds",
+    "slug": "leeds",
+    "focus": "Office floors and multi-site organisations",
+    "note": "For several locations, provide a named site contact and a consistent equipment schedule so findings can be compared across buildings."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "Sheffield",
+    "slug": "sheffield",
+    "focus": "Workplaces and operational premises",
+    "note": "Identify areas with changing occupancy or heat loads, and note whether complaints are linked to particular tasks or times of day."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "York",
+    "slug": "york",
+    "focus": "Homes, workplaces and customer-facing rooms",
+    "note": "Tell us whether you need a one-off service, planned commercial maintenance or help with a fault; dedicated York service pages provide further detail."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "Bradford",
+    "slug": "bradford",
+    "focus": "Commercial properties and shared buildings",
+    "note": "Confirm who operates the controls and who authorises repairs, particularly where a building has several occupiers or management contacts."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "Hull",
+    "slug": "hull",
+    "focus": "Operational buildings and commercial space",
+    "note": "List the rooms served by each system and flag equipment that must remain accessible while other work takes place on site."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "Doncaster",
+    "slug": "doncaster",
+    "focus": "Business premises and distributed sites",
+    "note": "Provide clear site addresses and access contacts, with fault descriptions tied to individual indoor or outdoor unit references."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "Wakefield",
+    "slug": "wakefield",
+    "focus": "Managed premises and office accommodation",
+    "note": "Share the maintenance history and any open recommendations so a new visit can focus on outstanding issues as well as routine checks."
+  },
+  {
+    "region": "Yorkshire",
+    "name": "Harrogate",
+    "slug": "harrogate",
+    "focus": "Guest accommodation and appointment-led spaces",
+    "note": "Coordinate room availability with bookings, and distinguish guest-facing equipment from units serving staff and support areas."
+  },
+  {
+    "region": "North West",
+    "name": "Manchester",
+    "slug": "manchester",
+    "focus": "Multi-floor workplaces and managed buildings",
+    "note": "Include floor-by-floor access requirements and a list of known faults so work can be sequenced around occupied departments."
+  },
+  {
+    "region": "North West",
+    "name": "Liverpool",
+    "slug": "liverpool",
+    "focus": "Commercial premises and visitor-facing spaces",
+    "note": "Tell us about busy public hours and any restrictions on access to reception, meeting or customer areas during a visit."
+  },
+  {
+    "region": "North West",
+    "name": "Warrington",
+    "slug": "warrington",
+    "focus": "Business units and multi-address portfolios",
+    "note": "Use a consistent asset reference for each system to keep service findings, quotations and follow-up work connected to the right equipment."
+  },
+  {
+    "region": "North West",
+    "name": "Chester",
+    "slug": "chester",
+    "focus": "Offices and existing commercial buildings",
+    "note": "Send photographs of unit positions and explain any limitations on access through shared entrances, corridors or upper floors."
+  },
+  {
+    "region": "North West",
+    "name": "Preston",
+    "slug": "preston",
+    "focus": "Professional premises and operational sites",
+    "note": "Identify the person who can explain how the systems are used day to day, alongside the contact who approves planned work."
+  },
+  {
+    "region": "North West",
+    "name": "Bolton",
+    "slug": "bolton",
+    "focus": "Retail premises and commercial workplaces",
+    "note": "Note whether a fault affects the whole property or one unit, and whether it changes when other systems are switched on."
+  },
+  {
+    "region": "North West",
+    "name": "Stockport",
+    "slug": "stockport",
+    "focus": "Managed offices and smaller commercial units",
+    "note": "Include equipment information and recent service records so ongoing care can be planned around condition, rather than age alone."
+  },
+  {
+    "region": "North West",
+    "name": "Blackpool",
+    "slug": "blackpool",
+    "focus": "Hospitality and customer-facing buildings",
+    "note": "Share occupancy patterns and the rooms that can be released for work, particularly when a phased visit is more practical than a full shutdown."
+  },
+  {
+    "region": "North East",
+    "name": "Newcastle upon Tyne",
+    "slug": "newcastle-upon-tyne",
+    "focus": "Office buildings and commercial estates",
+    "note": "Confirm access to roof-level or external equipment and provide the building contact responsible for permits, keys or escorted routes."
+  },
+  {
+    "region": "North East",
+    "name": "Sunderland",
+    "slug": "sunderland",
+    "focus": "Operational workplaces and managed property",
+    "note": "Describe which spaces need continuous comfort and identify any systems that can be taken out of use while checks are completed."
+  },
+  {
+    "region": "North East",
+    "name": "Durham",
+    "slug": "durham",
+    "focus": "Professional and education premises",
+    "note": "Include scheduled room use, site-access requirements and any areas needing a responsible person present during the visit."
+  },
+  {
+    "region": "North East",
+    "name": "Middlesbrough",
+    "slug": "middlesbrough",
+    "focus": "Commercial units and operational buildings",
+    "note": "Record the equipment type and the sequence of fault symptoms, including error displays and whether the system restarts normally."
+  },
+  {
+    "region": "North East",
+    "name": "Darlington",
+    "slug": "darlington",
+    "focus": "Business premises and property portfolios",
+    "note": "Bring together access contacts, service records and approval arrangements so maintenance and follow-up recommendations can be managed consistently."
+  }
+]

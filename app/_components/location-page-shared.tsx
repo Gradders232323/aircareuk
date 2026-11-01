@@ -1,3 +1,4 @@
+import { DirectoryNav } from "./directory-nav";
 import type { ReactNode } from "react";
 
 type NavItem = {
@@ -13,10 +14,12 @@ type LocationHeaderProps = {
 
 type LocationQuoteSectionProps = {
   id: string;
+  enquiryContext?: string;
   kicker: string;
   headline: ReactNode;
   copy: string;
   postcodeLabel?: string;
+  postcodePlaceholder?: string;
   emailLabel?: string;
   emailPlaceholder?: string;
   selectLabel: string;
@@ -37,22 +40,24 @@ function Brand({ footer = false }: { footer?: boolean }) {
 
 export function LocationHeader({ ctaHref, ctaLabel, navItems }: LocationHeaderProps) {
   return (
-    <header className="site-header york-header">
+    <><header className="site-header york-header">
       <Brand />
       <nav aria-label="Main navigation">
         {navItems.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
       </nav>
       <a className="header-cta" href={ctaHref}>{ctaLabel} <span aria-hidden="true">↗</span></a>
-    </header>
+    </header><DirectoryNav /></>
   );
 }
 
 export function LocationQuoteSection({
   id,
+  enquiryContext,
   kicker,
   headline,
   copy,
   postcodeLabel = "York postcode",
+  postcodePlaceholder = "e.g. YO10",
   emailLabel = "Email",
   emailPlaceholder = "you@example.com",
   selectLabel,
@@ -71,9 +76,10 @@ export function LocationQuoteSection({
         <a href="mailto:hello@aircareuk.co.uk">Prefer email? <b>hello@aircareuk.co.uk</b></a>
       </div>
       <form className="quote-form" action="mailto:hello@aircareuk.co.uk" method="post" encType="text/plain">
+        {enquiryContext && <input type="hidden" name="Enquiry page" value={enquiryContext} />}
         <div className="field-row">
           <label>Name<input required name="Name" autoComplete="name" placeholder="Your name" /></label>
-          <label>{postcodeLabel}<input required name="Postcode" autoComplete="postal-code" placeholder="e.g. YO10" /></label>
+          <label>{postcodeLabel}<input required name="Postcode" autoComplete="postal-code" placeholder={postcodePlaceholder} /></label>
         </div>
         <div className="field-row">
           <label>{emailLabel}<input required name="Email" type="email" autoComplete="email" placeholder={emailPlaceholder} /></label>
@@ -93,7 +99,7 @@ export function LocationFooter() {
     <footer>
       <Brand footer />
       <p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p>
-      <div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a></div>
+      <div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
       <small>© 2026 Air Care UK. All rights reserved.</small>
     </footer>
   );

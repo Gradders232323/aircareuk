@@ -1,3 +1,5 @@
+import { CoverageIntro } from "./_components/coverage-intro";
+import { DirectoryNav } from "./_components/directory-nav";
 import { ServiceIllustration } from "./_components/service-illustration";
 
 const services = [
@@ -44,7 +46,7 @@ export default function Home() {
           <a href="#faq">FAQs</a>
         </nav>
         <a className="header-cta" href="#quote">Get a free quote <span aria-hidden="true">↗</span></a>
-      </header>
+      </header><DirectoryNav />
 
       <section className="hero" id="top">
         <div className="hero-copy">
@@ -135,6 +137,8 @@ export default function Home() {
         </div>
       </section>
 
+      <CoverageIntro />
+
       <section className="quote-section" id="quote">
         <div className="quote-copy"><span className="kicker light">Free, no-pressure quote</span><h2>Ready for air that<br /><em>just feels better?</em></h2><p>Tell us what you need. We’ll come back with the right service and a clear price.</p><a href="tel:+442079460285">Prefer to talk? <b>020 7946 0285</b></a></div>
         <form className="quote-form" action="mailto:hello@aircareuk.co.uk" method="post" encType="text/plain">
@@ -150,7 +154,7 @@ export default function Home() {
       <footer>
         <a className="brand brand-footer" href="#top"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} /></a>
         <p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p>
-        <div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="tel:+442079460285">020 7946 0285</a></div>
+        <div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="tel:+442079460285">020 7946 0285</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
         <small>© 2026 Air Care UK. All rights reserved.</small>
       </footer>
     </main>

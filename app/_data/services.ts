@@ -1,0 +1,58 @@
+export const services = {
+  "air-conditioning": {
+    label: "Air conditioning", eyebrow: "Comfort, properly cared for", accent: "Without the surprises.",
+    intro: "Air conditioning servicing, planned maintenance and fault-finding support for homes, workplaces and commercial buildings. Tell us about your equipment and we will help you choose the right next step.",
+    overview: "A clear route to better system care",
+    overviewCopy: "Good air conditioning support starts with understanding the equipment you already have. A single room, an occupied office and a portfolio of properties each need a different approach to access, maintenance and reporting. Air Care UK brings those practical details into the service brief, so the work fits the building and the people using it.",
+    cards: [
+      { title: "Professional servicing", text: "Routine attention to filters, coils, drainage, airflow and controls helps you understand the condition of your system. We explain findings clearly and identify work that needs separate consideration.", href: "/air-conditioning-servicing-york", link: "See our servicing approach" },
+      { title: "Planned maintenance", text: "Arrange care around equipment use, building access and operating hours. A maintenance plan can bring regular checks and a clearer record of developing issues together, rather than relying on a breakdown to prompt action.", href: "/care-plan", link: "Explore ongoing care" },
+      { title: "Fault finding & repairs", text: "If equipment is noisy, leaking or no longer controlling temperature properly, share the symptoms and any fault code. Investigation helps establish what has happened before a repair and its cost are agreed.", href: "#quote", link: "Describe a fault" },
+    ],
+    practicalTitle: "A visit that fits your building",
+    practicalCopy: "Access to the equipment matters as much as the equipment itself. Before a visit, it helps to identify indoor and outdoor units, confirm who can authorise work and explain any restrictions on switching systems off. Where several rooms or sites are involved, an equipment list makes the brief easier to follow and the findings easier to act on.",
+    audienceTitle: "From one room to a property portfolio",
+    audienceCopy: "We support enquiries for homes, offices, shops, guest accommodation and other commercial premises. Tell us whether you need routine servicing, help with a specific fault or a maintenance arrangement across several addresses. The scope, access arrangements and quotation are agreed for the equipment involved.",
+    steps: [
+      ["Tell us about the system", "Share the address, number of units, equipment details and what you need help with. Photographs and service records are useful when available."],
+      ["Agree the work", "We review the enquiry, clarify access and explain the next step. You receive a scope and quotation before work is arranged."],
+      ["Keep a clear record", "Use the findings to decide on repairs, changes to operation or an ongoing maintenance schedule. Keep the report with your equipment information."],
+    ],
+    faqs: [
+      ["Can you help with both homes and business premises?", "Yes. Enquiries can cover domestic and commercial air conditioning. Include the type of property, the number of systems and the rooms served so the visit can be scoped appropriately."],
+      ["What should I send when reporting a fault?", "The site address, equipment make and model where known, any error code and a description of what happens when you run the system. Photographs of the affected unit and its controls can also help."],
+      ["Can maintenance be arranged for more than one building?", "Yes. Provide the addresses, equipment list and site contacts. We can discuss a maintenance approach that keeps access, reporting and follow-up work organised across the portfolio."],
+      ["Is a service the same as a TM44 inspection?", "No. Servicing concerns the condition and operation of equipment. A TM44 inspection is a separate energy assessment. Our inspection page explains that service in more detail."],
+    ],
+    options: ["Air conditioning servicing", "Planned maintenance", "Fault finding or repairs", "TM44 inspection enquiry", "Help with several sites"],
+    quoteCopy: "Tell us what equipment you have, where it is located and what needs attention. We will review the details and come back with a practical next step and a clear scope of work.",
+  },
+  "facilities-management": {
+    label: "Facilities management", eyebrow: "Well-kept buildings. Clearer plans.", accent: "Practical care, joined up.",
+    intro: "Facilities support for building owners, occupiers and managing agents, bringing planned maintenance, air conditioning care, fault reporting and follow-up work into a clearer service plan.",
+    overview: "Make building care easier to manage",
+    overviewCopy: "Facilities management works best when responsibilities are clear. Knowing what equipment is on site, who can provide access and which issues need attention makes routine maintenance easier to organise. Air Care UK helps turn those details into a practical brief, with air conditioning and HVAC care at the centre of the service.",
+    cards: [
+      { title: "Planned building care", text: "Bring equipment information, visit schedules and site responsibilities together. Plan maintenance around occupancy and operational needs, with a defined scope for each address rather than a one-size-fits-all checklist.", href: "/care-plan", link: "Explore maintenance care" },
+      { title: "HVAC & comfort support", text: "Include air conditioning servicing, maintenance and investigation of comfort problems within the building plan. Keep system findings and recommended work connected to the equipment and rooms they relate to.", href: "/air-conditioning", link: "View air conditioning services" },
+      { title: "Reporting & follow-up", text: "Use a consistent process for recording faults, agreeing access and reviewing recommendations. Separate routine work from quoted repairs so the person responsible for the building can make informed decisions.", href: "#quote", link: "Discuss your building" },
+    ],
+    practicalTitle: "Start with the assets and responsibilities",
+    practicalCopy: "A useful facilities brief sets out the buildings, equipment and people involved. Existing service records, equipment schedules and open recommendations provide a starting point. We discuss the support required, identify access and approval arrangements and agree which activities belong in the plan. Where specialist work is needed, its scope and responsibility should be clear before it is instructed.",
+    audienceTitle: "Support for the people running the building",
+    audienceCopy: "Whether you look after one workplace or coordinate several properties, a clear record of what needs doing reduces avoidable back-and-forth. Share the size and use of each building, the equipment you want included and how faults are currently reported. We can then discuss a service arrangement based on the premises and responsibilities you actually manage.",
+    steps: [
+      ["Build the brief", "List the buildings, equipment, operating hours and maintenance issues you want included. Identify the person responsible for each site."],
+      ["Set the responsibilities", "Agree the service scope, access process, reporting requirements and approval route for additional work. Separate planned activities from reactive requests."],
+      ["Review and follow through", "Keep findings, quotations and completed work connected to the building record. Review the plan when occupancy, equipment or site requirements change."],
+    ],
+    faqs: [
+      ["What can a facilities-management enquiry include?", "Tell us about planned maintenance, air conditioning and HVAC care, fault reporting, service records and the buildings you manage. We will discuss the scope needed and clarify the activities to be included."],
+      ["Can you support a managing agent or a multi-site organisation?", "Yes. Include the site addresses and explain who arranges access, receives reports and approves additional work. Those details help create a consistent process across the properties."],
+      ["Do we need an equipment register before enquiring?", "No. Send the information you have, such as previous reports, photographs and a list of known systems. We can discuss what further information is needed to define the work."],
+      ["Is every building service automatically included?", "No. Facilities arrangements are scoped to the property. Set out the maintenance and support you need so responsibilities, any specialist requirements and quoted work can be agreed explicitly."],
+    ],
+    options: ["Planned facilities maintenance", "Air conditioning and HVAC support", "Fault reporting and follow-up", "Multi-site maintenance", "Discuss a facilities brief"],
+    quoteCopy: "Tell us about your buildings, equipment and the support you need. Include the locations, existing arrangements and any recurring problems so we can discuss a clear service brief.",
+  },
+} as const;
