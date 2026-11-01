@@ -34,7 +34,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Air Care UK home">
-          <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} />
+          <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} />
         </a>
         <nav aria-label="Main navigation">
           <a href="#services">Services</a>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
 
         <div className="hero-visual hero-brand">
-          <img className="hero-brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Heating &amp; Cooling, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
+          <img className="hero-brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
         </div>
       </section>
 
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand brand-footer" href="#top"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} /></a>
+        <a className="brand brand-footer" href="#top"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Air Conditioning" width={1254} height={1254} /></a>
         <p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p>
         <div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="tel:+442079460285">020 7946 0285</a></div>
         <small>© 2026 Air Care UK. All rights reserved.</small>
