@@ -1,3 +1,4 @@
+import { HeroLogo } from "../_components/hero-logo";
 import type { Metadata } from "next";
 import { LocationFooter, LocationHeader, LocationQuoteSection } from "../_components/location-page-shared";
 
@@ -93,12 +94,7 @@ export default function YorkMaintenancePage() {
             <span>✓ Commercial expertise</span><span>✓ Fast response</span><span>✓ Nationwide coverage</span>
           </div>
         </div>
-        <div className="york-hero-panel maintenance-hero-panel">
-          <div className="minster-lines" aria-hidden="true"><i /><i /><i /></div>
-          <div className="york-unit" aria-hidden="true"><span>Air Care UK</span><b>21°</b><div><i /><i /><i /><i /><i /></div></div>
-          <div className="york-ticket"><span>Planned maintenance</span><strong>Inspect. Maintain. Protect.</strong><small>Practical care for commercial systems.</small></div>
-          <div className="york-pin"><b>YO</b><span>Fast local<br />response</span></div>
-        </div>
+        <div className="hero-logo-panel"><HeroLogo /></div>
       </section>
 
       <section className="york-proof-strip">

@@ -1,3 +1,4 @@
+import { HeroLogo } from "../_components/hero-logo";
 import { AreaDirectory } from "../_components/coverage-pages";
 import { TM44QuoteSection, TM44PricingSection } from "../_components/tm44-sections";
 import { DirectoryNav } from "../_components/directory-nav";
@@ -63,12 +64,7 @@ export default function TM44Page() {
           <div className="hero-actions"><a className="button button-primary" href="#tm44-enquiry">Get a TM44 quote <span>↗</span></a><a className="text-link" href="#scope">Check if you’re in scope <span aria-hidden="true">↓</span></a></div>
           <div className="trust-row"><span>✓ Accredited assessment</span><span>✓ Lodged ACIR</span><span>✓ Clear recommendations</span></div>
         </div>
-        <div className="tm44-hero-panel">
-          <div className="tm44-grid" aria-hidden="true" />
-          <div className="tm44-report"><span>Air conditioning inspection</span><strong>TM44</strong><small>Energy performance report</small><div><i /><i /><i /></div></div>
-          <div className="tm44-threshold"><small>Effective rated output</small><strong>&gt;12kW</strong><span>Inspection required</span></div>
-          <div className="tm44-valid"><b>✓</b><span>Valid report<br />lodged</span></div>
-        </div>
+        <div className="hero-logo-panel"><HeroLogo /></div>
       </section>
 
       <section className="tm44-strip"><span><b>Over 12kW</b> combined output</span><span><b>5 years</b> maximum interval</span><span><b>1 report</b> lodged on the register</span></section>

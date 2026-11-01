@@ -1,3 +1,4 @@
+import { HeroLogo } from "../_components/hero-logo";
 import { DirectoryNav } from "../_components/directory-nav";
 import type { Metadata } from "next";
 
@@ -65,12 +66,7 @@ export default function CarePlanPage() {
           <div className="hero-actions"><a className="button button-primary" href="#plan-enquiry">Build my care plan <span>↗</span></a><a className="text-link" href="#included">See what’s included <span aria-hidden="true">↓</span></a></div>
           <div className="trust-row"><span>✓ Homes & workplaces</span><span>✓ All major brands</span><span>✓ Clear plan terms</span></div>
         </div>
-        <div className="cp-hero-panel">
-          <div className="cp-orbit cp-orbit-one" /><div className="cp-orbit cp-orbit-two" />
-          <div className="cp-calendar"><span>Your care cycle</span><strong>12</strong><small>months of planned comfort</small><div><i className="done" /><i /><i /><i /></div></div>
-          <div className="cp-plan-card"><span>Air Care UK plan</span><strong>Next visit: scheduled</strong><small>We’ll remind you before it’s due.</small></div>
-          <div className="cp-priority"><b>01</b><span>Priority<br />customer</span></div>
-        </div>
+        <div className="hero-logo-panel"><HeroLogo /></div>
       </section>
 
       <section className="cp-strip"><span>Planned visits</span><i>✦</i><span>Priority booking</span><i>✦</i><span>Clear records</span><i>✦</i><span>Member pricing</span></section>

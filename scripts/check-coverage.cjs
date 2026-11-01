@@ -17,6 +17,8 @@ const paths = ['/', '/care-plan', '/tm44-air-conditioning-inspections', '/air-co
       assert.equal(response.status, 200, path);
       const html = await response.text();
       assert.equal((html.match(/<h1\b/g) || []).length, 1, path);
+      const hero = html.match(/<section[^>]*class="[^"]*hero[^"]*"[^>]*>([\s\S]*?)<\/section>/);
+      assert(hero && hero[1].includes('src="/air-care-uk-hero.svg"'), 'Missing hero logo ' + path);
       assert(urls.includes('https://www.aircareuk.co.uk' + path), 'Missing sitemap entry ' + path);
       if (/^\/(air-conditioning|facilities-management|tm44-air-conditioning-inspections)\//.test(path)) {
         assert(html.includes('href="https://www.aircareuk.co.uk' + path + '"'), 'Canonical ' + path);

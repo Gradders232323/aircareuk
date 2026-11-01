@@ -340,3 +340,8 @@ footer::before { content:"INSPECT  ✦  MAINTAIN  ✦  SERVICE  ✦  BREATHE EAS
 .tm44-final-cta h2 { font-size:clamp(42px,4.5vw,64px); line-height:1.05; margin:15px 0 0; }
 footer::before { content:"TM44 INSPECTIONS  ✦  LODGED REPORTS  ✦  AIR CONDITIONING CARE"; }
 @media (max-width:600px) { .tm44-final-cta { padding:45px 22px; } .tm44-final-cta .button { max-width:100%; font-size:11px; } }
+/* One shared hero mark across every service and location page. */
+.hero-logo-art { display:block; width:100%; height:auto; max-width:620px; aspect-ratio:1254 / 1000; object-fit:contain; }
+.hero-logo-panel { display:flex; align-items:center; justify-content:center; min-width:0; padding:40px 28px; background:var(--paper); }
+@media (max-width:900px) { .hero-logo-panel { padding:10px 24px 45px; } .hero-logo-panel .hero-logo-art { max-width:480px; } }
+@media (max-width:600px) { .hero-logo-panel { padding:0 22px 35px; } .hero-logo-panel .hero-logo-art { max-width:370px; } }

@@ -1,3 +1,4 @@
+import { HeroLogo } from "./_components/hero-logo";
 import type { Metadata } from "next";
 import { TM44QuoteSection, TM44QuickFacts, TM44ScopeSection, TM44ReportSection, TM44ProcessSection, TM44PricingSection, TM44FinalCTA } from "./_components/tm44-sections";
 import { tm44Faqs as faqs, tm44Guidance } from "./_data/tm44";
@@ -69,7 +70,7 @@ export default function Home() {
         </div>
 
         <div className="hero-visual hero-brand">
-          <img className="hero-brand-logo" src="/air-care-uk-hero.svg" alt="Air Care UK — TM44 &amp; Air Conditioning, retro polar bear badge" width={1254} height={1254} fetchPriority="high" />
+          <HeroLogo className="hero-brand-logo" />
         </div>
       </section>
 
