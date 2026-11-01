@@ -1,3 +1,4 @@
+import { quoteHref } from "../_data/quote";
 import { HeroLogo } from "../_components/hero-logo";
 import type { Metadata } from "next";
 import { LocationFooter, LocationHeader, LocationQuoteSection } from "../_components/location-page-shared";
@@ -75,7 +76,7 @@ export default function YorkMaintenancePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <LocationHeader
-        ctaHref="#maintenance-quote"
+        ctaHref={quoteHref({ service: "maintenance", from: "/air-conditioning-maintenance-york" })}
         ctaLabel="Request a quote"
         navItems={[{ href: "/#services", label: "Services" }, { href: "#maintenance-included", label: "What’s included" }, { href: "#maintenance-faq", label: "FAQs" }]}
       />
@@ -87,7 +88,7 @@ export default function YorkMaintenancePage() {
           <h1>Air conditioning<br />maintenance in <em>York.</em></h1>
           <p>Keep your commercial air conditioning running efficiently and reliably with professional maintenance, fast reactive support and nationwide coverage from Air Care.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#maintenance-quote">Get a maintenance quote <span>↗</span></a>
+            <a className="button button-primary" href={quoteHref({ service: "maintenance", from: "/air-conditioning-maintenance-york" })}>Get a maintenance quote <span>↗</span></a>
             <a className="text-link" href="#maintenance-included">Explore the service <span aria-hidden="true">↓</span></a>
           </div>
           <div className="trust-row">
@@ -163,7 +164,7 @@ export default function YorkMaintenancePage() {
         <div className="maintenance-faults">
           {commonFaults.map((fault) => <span key={fault}>✓ {fault}</span>)}
         </div>
-        <div className="maintenance-callout"><strong>Have an urgent air conditioning issue?</strong><p>Tell us what is happening, where the system is located and any fault code shown. We’ll discuss the problem and arrange the appropriate next step.</p><a href="#maintenance-quote">Request support <span>↗</span></a></div>
+        <div className="maintenance-callout"><strong>Have an urgent air conditioning issue?</strong><p>Tell us what is happening, where the system is located and any fault code shown. We’ll discuss the problem and arrange the appropriate next step.</p><a href={quoteHref({ service: "maintenance", from: "/air-conditioning-maintenance-york" })}>Request support <span>↗</span></a></div>
       </section>
 
       <section className="maintenance-response section">
@@ -171,7 +172,7 @@ export default function YorkMaintenancePage() {
         <div className="maintenance-response-copy">
           <p>When air conditioning fails in a commercial building, getting someone to investigate quickly can be important. That is why fast response times are a key part of the Air Care service.</p>
           <p>Our engineers support York businesses with maintenance and reactive repair requirements, helping problems get investigated without unnecessary delays. If the issue is urgent, tell us what is happening with your system and we will discuss the problem and arrange the appropriate next step.</p>
-          <a className="button button-mint" href="#maintenance-quote">Tell us about the fault <span>↗</span></a>
+          <a className="button button-mint" href={quoteHref({ service: "maintenance", from: "/air-conditioning-maintenance-york" })}>Tell us about the fault <span>↗</span></a>
         </div>
       </section>
 
@@ -232,7 +233,7 @@ export default function YorkMaintenancePage() {
         </div>
       </section>
 
-      <LocationQuoteSection
+      <LocationQuoteSection enquiryContext="/air-conditioning-maintenance-york"
         id="maintenance-quote"
         kicker="Book maintenance in York"
         headline={<>Keep your systems<br /><em>working reliably.</em></>}

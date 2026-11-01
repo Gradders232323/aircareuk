@@ -1,3 +1,4 @@
+import { quoteHref } from "../_data/quote";
 import { HeroLogo } from "../_components/hero-logo";
 import { AreaDirectory } from "../_components/coverage-pages";
 import { TM44QuoteSection, TM44PricingSection } from "../_components/tm44-sections";
@@ -52,7 +53,7 @@ export default function TM44Page() {
       <header className="site-header tm44-header">
         <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a>
         <MainNav />
-        <a className="header-cta" href="#tm44-enquiry">Arrange an inspection <span aria-hidden="true">↗</span></a>
+        <a className="header-cta" href={quoteHref({ service: "tm44", from: "/tm44-air-conditioning-inspections" })}>Arrange an inspection <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 
       <section className="tm44-hero">
@@ -61,7 +62,7 @@ export default function TM44Page() {
           <div className="eyebrow"><span /> Air conditioning energy compliance</div>
           <h1>TM44 inspections,<br /><em>made clear.</em></h1>
           <p>For air conditioning systems over 12kW in England and Wales: an accredited assessment, a valid lodged report and practical advice you can use.</p>
-          <div className="hero-actions"><a className="button button-primary" href="#tm44-enquiry">Get a TM44 quote <span>↗</span></a><a className="text-link" href="#scope">Check if you’re in scope <span aria-hidden="true">↓</span></a></div>
+          <div className="hero-actions"><a className="button button-primary" href={quoteHref({ service: "tm44", from: "/tm44-air-conditioning-inspections" })}>Get a TM44 quote <span>↗</span></a><a className="text-link" href="#scope">Check if you’re in scope <span aria-hidden="true">↓</span></a></div>
           <div className="trust-row"><span>✓ Accredited assessment</span><span>✓ Lodged ACIR</span><span>✓ Clear recommendations</span></div>
         </div>
         <div className="hero-logo-panel"><HeroLogo /></div>
@@ -76,7 +77,7 @@ export default function TM44Page() {
           <article><span>02</span><h3>Under single control</h3><p>Several smaller units controlled by the same person can form one system.</p></article>
           <article><span>03</span><h3>Five years have passed</h3><p>Your last valid report is approaching its fifth anniversary—or no report exists.</p></article>
         </div>
-        <div className="tm44-note"><strong>Not sure of the capacity?</strong><p>Send us an equipment list, model numbers or recent maintenance records. We can help establish whether a formal assessment is likely to be required.</p><a href="#tm44-enquiry">Ask us to check <span>↗</span></a></div>
+        <div className="tm44-note"><strong>Not sure of the capacity?</strong><p>Send us an equipment list, model numbers or recent maintenance records. We can help establish whether a formal assessment is likely to be required.</p><a href={quoteHref({ service: "tm44", from: "/tm44-air-conditioning-inspections" })}>Ask us to check <span>↗</span></a></div>
       </section>
 
       <section className="tm44-included section" id="included">

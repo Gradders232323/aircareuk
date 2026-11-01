@@ -1,8 +1,9 @@
-import { TM44QuoteForm } from "./tm44-quote-form";
+import { QuotePageLink } from "./quote-page-link";
+import { quoteHref } from "../_data/quote";
 import { tm44Faqs, tm44Guidance, tm44ReportItems, tm44PricingFactors, tm44Path } from "../_data/tm44";
 
 export function TM44QuoteSection({ id = "quote", context = "/", locationName }: { id?: string; context?: string; locationName?: string }) {
-  return <section className="quote-section tm44-conversion" id={id}><div className="quote-copy"><span className="kicker light">{locationName ? `TM44 quote for ${locationName}` : "Start your TM44 enquiry"}</span><h2>A clear scope.<br /><em>A quote that fits.</em></h2><p>Tell us about the building and its air conditioning. Include an approximate unit count and your last report if you have one. You can still enquire if those details are not yet available.</p><ul className="tm44-quote-points"><li>One building or a property portfolio</li><li>New inspections and five-year renewals</li><li>Scope, access and price agreed before booking</li></ul><p className="tm44-enquiry-note">The form prepares an email to our team. Add any existing report or equipment schedule before sending.</p><a href="mailto:hello@aircareuk.co.uk?subject=TM44%20inspection%20enquiry">Prefer to email directly? <b>hello@aircareuk.co.uk</b></a></div><TM44QuoteForm context={context} locationName={locationName} /></section>;
+  return <section className="quote-section tm44-conversion" id={id}><div className="quote-copy"><span className="kicker light">{locationName ? `TM44 quote for ${locationName}` : "Start your TM44 enquiry"}</span><h2>A clear scope.<br /><em>A quote that fits.</em></h2><p>Tell us about the building and its air conditioning. Include an approximate unit count and your last report if you have one. You can still enquire if those details are not yet available.</p><ul className="tm44-quote-points"><li>One building or a property portfolio</li><li>New inspections and five-year renewals</li><li>Scope, access and price agreed before booking</li></ul><p className="tm44-enquiry-note">Continue to our dedicated quote page to add your site and contact details. Your service and area will be carried through.</p><a href="mailto:hello@aircareuk.co.uk?subject=TM44%20inspection%20enquiry">Prefer to email directly? <b>hello@aircareuk.co.uk</b></a></div><QuotePageLink context={context} service="tm44" label="Continue to TM44 quote" /></section>;
 }
 export function TM44QuickFacts() {
   return <div className="tm44-priority-strip"><span><b>Over 12kW</b> effective rated output</span><span><b>Five years</b> maximum inspection interval</span><span><b>Lodged ACIR</b> report with a reference number</span></div>;
@@ -22,6 +23,6 @@ export function TM44ProcessSection() {
 export function TM44FaqSection({ id = "faq" }: { id?: string }) {
   return <section className="section faq" id={id}><div className="faq-intro"><span className="kicker">TM44 questions</span><h2>Before you<br /><em>book.</em></h2><p>Scope, timing, reports and the information needed for a quote.</p><a className="tm44-gov-link" href={tm44Guidance} target="_blank" rel="noreferrer">Read the official GOV.UK guidance ↗</a></div><div className="faq-list">{tm44Faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>;
 }
-export function TM44FinalCTA() {
-  return <section className="tm44-final-cta"><div><span className="kicker">Ready for the next step?</span><h2>Get your TM44<br /><em>inspection quote.</em></h2></div><a className="button button-primary" href="#quote">Tell us about your building ↗</a></section>;
+export function TM44FinalCTA({ context = "/" }: { context?: string }) {
+  return <section className="tm44-final-cta"><div><span className="kicker">Ready for the next step?</span><h2>Get your TM44<br /><em>inspection quote.</em></h2></div><a className="button button-primary" href={quoteHref({ service: "tm44", from: context })}>Tell us about your building ↗</a></section>;
 }

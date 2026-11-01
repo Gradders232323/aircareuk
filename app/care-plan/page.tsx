@@ -1,3 +1,5 @@
+import { QuotePageLink } from "../_components/quote-page-link";
+import { quoteHref } from "../_data/quote";
 import { HeroLogo } from "../_components/hero-logo";
 import { DirectoryNav, MainNav } from "../_components/directory-nav";
 import type { Metadata } from "next";
@@ -54,7 +56,7 @@ export default function CarePlanPage() {
       <header className="site-header care-header">
         <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a>
         <MainNav />
-        <a className="header-cta" href="#plan-enquiry">Ask about a plan <span aria-hidden="true">↗</span></a>
+        <a className="header-cta" href={quoteHref({ service: "care-plan", from: "/care-plan" })}>Ask about a plan <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 
       <section className="cp-hero">
@@ -63,7 +65,7 @@ export default function CarePlanPage() {
           <div className="eyebrow"><span /> Planned maintenance, made simple</div>
           <h1>Comfort you can<br />count on, <em>all year.</em></h1>
           <p>Stay ahead of breakdowns and rising running costs with scheduled air conditioning care, priority support and no confusing surprises.</p>
-          <div className="hero-actions"><a className="button button-primary" href="#plan-enquiry">Build my care plan <span>↗</span></a><a className="text-link" href="#included">See what’s included <span aria-hidden="true">↓</span></a></div>
+          <div className="hero-actions"><a className="button button-primary" href={quoteHref({ service: "care-plan", from: "/care-plan" })}>Build my care plan <span>↗</span></a><a className="text-link" href="#included">See what’s included <span aria-hidden="true">↓</span></a></div>
           <div className="trust-row"><span>✓ Homes & workplaces</span><span>✓ All major brands</span><span>✓ Clear plan terms</span></div>
         </div>
         <div className="hero-logo-panel"><HeroLogo /></div>
@@ -79,7 +81,7 @@ export default function CarePlanPage() {
       </section>
 
       <section className="cp-why section">
-        <div className="cp-why-copy"><span className="kicker light">Why plan ahead?</span><h2>Small checks prevent<br /><em>big interruptions.</em></h2><p>Regular servicing helps your system stay clean, efficient and dependable—and gives you a clearer view of its condition over time.</p><a className="button button-mint" href="#plan-enquiry">Ask about cover <span>↗</span></a></div>
+        <div className="cp-why-copy"><span className="kicker light">Why plan ahead?</span><h2>Small checks prevent<br /><em>big interruptions.</em></h2><p>Regular servicing helps your system stay clean, efficient and dependable—and gives you a clearer view of its condition over time.</p><a className="button button-mint" href={quoteHref({ service: "care-plan", from: "/care-plan" })}>Ask about cover <span>↗</span></a></div>
         <div className="cp-benefit-stack">
           <div><b>01</b><span><strong>Protect efficiency</strong><small>Clean, well-checked equipment can deliver comfort without working harder than necessary.</small></span></div>
           <div><b>02</b><span><strong>Plan ahead</strong><small>Service records make it easier to budget for wear and deal with developing issues early.</small></span></div>
@@ -104,13 +106,7 @@ export default function CarePlanPage() {
 
       <section className="quote-section cp-enquiry" id="plan-enquiry">
         <div className="quote-copy"><span className="kicker light">A plan that fits</span><h2>Let’s take care of<br /><em>the next service.</em></h2><p>Tell us a little about your property and equipment. We’ll recommend a sensible schedule and send a clear care plan quote.</p><a href="mailto:hello@aircareuk.co.uk">Prefer email? <b>hello@aircareuk.co.uk</b></a></div>
-        <form className="quote-form" action="mailto:hello@aircareuk.co.uk" method="post" encType="text/plain">
-          <div className="field-row"><label>Name<input required name="Name" autoComplete="name" placeholder="Your name" /></label><label>Postcode<input required name="Postcode" autoComplete="postal-code" placeholder="Your postcode" /></label></div>
-          <div className="field-row"><label>Email<input required name="Email" type="email" autoComplete="email" placeholder="you@example.com" /></label><label>Phone<input name="Phone" type="tel" autoComplete="tel" placeholder="Best number" /></label></div>
-          <label>Plan for<select name="Plan for" defaultValue=""><option value="" disabled>Select one</option><option>My home</option><option>My workplace</option><option>Several properties</option><option>Not sure yet</option></select></label>
-          <label>Tell us about your system<textarea name="System details" rows={3} placeholder="Number of units, how often they’re used, and when they were last serviced…" /></label>
-          <button className="button button-mint" type="submit">Request my care plan <span>↗</span></button><small>By submitting, you agree that we may contact you about your enquiry.</small>
-        </form>
+        <QuotePageLink context="/care-plan" label="Continue to care plan quote" />
       </section>
 
       <footer><a className="brand brand-footer" href="/"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} /></a><p>TM44 air conditioning inspections, maintenance and facilities support for buildings and property portfolios.</p><div><a href="/tm44-air-conditioning-inspections">TM44 inspections &amp; areas</a><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div><small>© 2026 Air Care UK. All rights reserved.</small></footer>

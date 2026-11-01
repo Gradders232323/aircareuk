@@ -1,3 +1,4 @@
+import { quoteHref } from "./_data/quote";
 import { HeroLogo } from "./_components/hero-logo";
 import type { Metadata } from "next";
 import { TM44QuoteSection, TM44QuickFacts, TM44ScopeSection, TM44ReportSection, TM44ProcessSection, TM44PricingSection, TM44FinalCTA } from "./_components/tm44-sections";
@@ -46,7 +47,7 @@ export default function Home() {
           <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — TM44 &amp; Air Conditioning" width={1254} height={1254} />
         </a>
         <MainNav />
-        <a className="header-cta" href="#quote">Get a TM44 quote <span aria-hidden="true">↗</span></a>
+        <a className="header-cta" href={quoteHref({ service: "tm44", from: "/" })}>Get a TM44 quote <span aria-hidden="true">↗</span></a>
       </header><DirectoryNav />
 
       <section className="hero" id="top">
@@ -55,7 +56,7 @@ export default function Home() {
           <h1>TM44 inspections.<br /><em>Know where you stand.</em></h1>
           <p>Accredited TM44 air conditioning inspections, a lodged report and clear energy-performance recommendations. Get a quote for your building or property portfolio across 67 areas in England.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#quote">Get a TM44 quote <span>↗</span></a>
+            <a className="button button-primary" href={quoteHref({ service: "tm44", from: "/" })}>Get a TM44 quote <span>↗</span></a>
             <a className="text-link" href="/tm44-air-conditioning-inspections#areas">Find your TM44 area ↓</a>
           </div>
           <div className="trust-row" aria-label="Service benefits">

@@ -1,3 +1,4 @@
+import { quoteHref } from "../_data/quote";
 import { HeroLogo } from "../_components/hero-logo";
 import type { Metadata } from "next";
 import { LocationFooter, LocationHeader, LocationQuoteSection } from "../_components/location-page-shared";
@@ -53,7 +54,7 @@ export default function YorkServicingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <LocationHeader
-        ctaHref="#york-quote"
+        ctaHref={quoteHref({ service: "servicing", from: "/air-conditioning-servicing-york" })}
         ctaLabel="Book a York service"
         navItems={[{ href: "/#services", label: "Services" }, { href: "#included", label: "What’s included" }, { href: "#york-faq", label: "FAQs" }]}
       />
@@ -65,7 +66,7 @@ export default function YorkServicingPage() {
           <h1>Air conditioning<br />servicing in <em>York.</em></h1>
           <p>Keep your system efficient, reliable and clean with a thorough professional service for your York home or workplace.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#york-quote">Get my servicing quote <span>↗</span></a>
+            <a className="button button-primary" href={quoteHref({ service: "servicing", from: "/air-conditioning-servicing-york" })}>Get my servicing quote <span>↗</span></a>
             <a className="text-link" href="#included">See what’s included <span aria-hidden="true">↓</span></a>
           </div>
           <div className="trust-row">
@@ -128,7 +129,7 @@ export default function YorkServicingPage() {
         </div>
       </section>
 
-      <LocationQuoteSection
+      <LocationQuoteSection enquiryContext="/air-conditioning-servicing-york"
         id="york-quote"
         kicker="York servicing enquiry"
         headline={<>Let’s get your air<br /><em>flowing properly.</em></>}

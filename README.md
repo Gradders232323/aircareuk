@@ -6,10 +6,10 @@ Air Care UK website with the retro polar bear identity, a TM44 inspection hub an
 
 - Five original pages remain available at their original URLs.
 - `/air-conditioning` and `/facilities-management` are the service overview and area directory pages.
-- TM44, air conditioning and facilities management each have 67 location pages at `/<service>/<location>`: 201 location pages, 211 pages overall.
+- TM44, air conditioning and facilities management each have 67 location pages at `/<service>/<location>`: 201 location pages, 212 pages overall.
 - Location names, regions and individual planning notes are in `app/_data/locations.json`.
 - Service copy is in `app/_data/services.ts`; shared layouts are in `app/_components/coverage-pages.tsx`.
-- `public/sitemap.xml` lists all 211 pages. Update it when adding or removing coverage locations.
+- `public/sitemap.xml` lists all 212 pages. Update it when adding or removing coverage locations.
 - Enquiry forms retain the existing mailto behaviour. New location forms include their source page in a hidden field.
 
 ## Run and verify
@@ -29,7 +29,7 @@ With the production preview running, run this in a second terminal:
 npm run check:coverage
 ```
 
-The coverage check verifies all 211 pages, sitemap entries, location canonicals, structured data, internal coverage links, form context and unknown-area 404 responses. Set CHECK_SITE_URL to check another reachable origin.
+The coverage check verifies all 212 pages, sitemap entries, location canonicals, structured data, internal coverage links, form context and unknown-area 404 responses. Set CHECK_SITE_URL to check another reachable origin.
 
 ## Cloudflare deployment
 
@@ -51,3 +51,9 @@ The TM44 form prepares a URL-encoded email draft for `hello@aircareuk.co.uk`; vi
 Inspection requirements were checked against GOV.UK's guide to air conditioning inspections in buildings on 1 November 2026. Relevant pages link to that guidance.
 
 Main navigation is shared across all pages: TM44, Servicing, Installations, Repairs. General service landing pages use `app/_components/service-landing-page.tsx` and `app/_data/service-landings.ts`.
+
+## Dedicated quoting page
+
+All quote forms now live at `/quote`. The service selector defaults to TM44. Service and location buttons pass `service`, `area` and `from` query parameters. Incoming services and areas are checked against the configured lists; source pages are accepted only when they match a known page path.
+
+The quote page prepares an email draft; it does not send or store a lead. Marketing pages have quote links instead of embedded forms. Shared form behaviour is implemented by `QuoteForm` in `app/_components/tm44-quote-form.tsx`, with link helpers in `app/_data/quote.ts`.

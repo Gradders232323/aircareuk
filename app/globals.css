@@ -350,3 +350,13 @@ footer::before { content:"TM44 INSPECTIONS  ✦  LODGED REPORTS  ✦  AIR CONDIT
 @media (max-width:900px) { .directory-nav { display:flex; flex-wrap:nowrap; justify-content:center; gap:clamp(14px,4vw,32px); } .directory-nav>a:last-child { flex-basis:auto; } }
 @media (max-width:400px) { .directory-nav { gap:16px; padding-inline:14px; font-size:10px; } }
 .coverage-editorial .coverage-related-services>a { color:var(--gold); border-color:var(--gold); }
+/* Quote forms live on one dedicated, service-aware page. */
+.quote-page-card { align-self:center; min-width:0; padding:34px; color:var(--navy); background:var(--white); border-top:4px solid var(--gold); border-radius:3px; }
+.quote-page-card h3 { font-size:40px; line-height:1.05; margin:20px 0; }
+.quote-page-card h3 em { font:italic 700 .85em Georgia,serif; text-transform:none; color:var(--red); }
+.quote-page-card p { color:var(--muted); font-size:14px; line-height:1.8; }
+.quote-page-card .button { max-width:100%; white-space:normal; }
+.quote-page-card small { display:block; font-size:11px; line-height:1.8; margin-top:20px; color:var(--muted); }
+.dedicated-quote-page .quote-page-hero { padding-top:40px; padding-bottom:45px; }
+.dedicated-quote-page .quote-page-hero h1 { font-size:clamp(54px,5.6vw,80px); }
+@media (max-width:600px) { .quote-page-card { padding:27px 22px; } .quote-page-card h3 { font-size:36px; } .dedicated-quote-page .quote-page-hero h1 { font-size:49px; } }

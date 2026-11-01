@@ -1,3 +1,4 @@
+import { QuotePageLink } from "./quote-page-link";
 import { DirectoryNav, MainNav } from "./directory-nav";
 import type { ReactNode } from "react";
 
@@ -48,48 +49,8 @@ export function LocationHeader({ ctaHref, ctaLabel }: LocationHeaderProps) {
   );
 }
 
-export function LocationQuoteSection({
-  id,
-  enquiryContext,
-  kicker,
-  headline,
-  copy,
-  postcodeLabel = "York postcode",
-  postcodePlaceholder = "e.g. YO10",
-  emailLabel = "Email",
-  emailPlaceholder = "you@example.com",
-  selectLabel,
-  selectName,
-  options,
-  textareaLabel,
-  textareaPlaceholder,
-  buttonLabel,
-}: LocationQuoteSectionProps) {
-  return (
-    <section className="quote-section york-quote" id={id}>
-      <div className="quote-copy">
-        <span className="kicker light">{kicker}</span>
-        <h2>{headline}</h2>
-        <p>{copy}</p>
-        <a href="mailto:hello@aircareuk.co.uk">Prefer email? <b>hello@aircareuk.co.uk</b></a>
-      </div>
-      <form className="quote-form" action="mailto:hello@aircareuk.co.uk" method="post" encType="text/plain">
-        {enquiryContext && <input type="hidden" name="Enquiry page" value={enquiryContext} />}
-        <div className="field-row">
-          <label>Name<input required name="Name" autoComplete="name" placeholder="Your name" /></label>
-          <label>{postcodeLabel}<input required name="Postcode" autoComplete="postal-code" placeholder={postcodePlaceholder} /></label>
-        </div>
-        <div className="field-row">
-          <label>{emailLabel}<input required name="Email" type="email" autoComplete="email" placeholder={emailPlaceholder} /></label>
-          <label>Phone<input name="Phone" type="tel" autoComplete="tel" placeholder="Best number" /></label>
-        </div>
-        <label>{selectLabel}<select name={selectName} defaultValue=""><option value="" disabled>Select one</option>{options.map((option) => <option key={option}>{option}</option>)}</select></label>
-        <label>{textareaLabel}<textarea name="System details" rows={3} placeholder={textareaPlaceholder} /></label>
-        <button className="button button-mint" type="submit">{buttonLabel} <span>↗</span></button>
-        <small>By submitting, you agree that we may contact you about your enquiry.</small>
-      </form>
-    </section>
-  );
+export function LocationQuoteSection({ id, enquiryContext = "/", kicker, headline, copy, buttonLabel }: LocationQuoteSectionProps) {
+  return <section className="quote-section york-quote" id={id}><div className="quote-copy"><span className="kicker light">{kicker}</span><h2>{headline}</h2><p>{copy}</p><a href="mailto:hello@aircareuk.co.uk">Prefer email? <b>hello@aircareuk.co.uk</b></a></div><QuotePageLink context={enquiryContext} label={buttonLabel} /></section>;
 }
 
 export function LocationFooter() {
@@ -97,7 +58,7 @@ export function LocationFooter() {
     <footer>
       <Brand footer />
       <p>TM44 air conditioning inspections, maintenance and facilities support for buildings and property portfolios.</p>
-      <div><a href="/tm44-air-conditioning-inspections">TM44 inspections &amp; areas</a><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
+      <div><a href="/quote">Request a quote</a><a href="/tm44-air-conditioning-inspections">TM44 inspections &amp; areas</a><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a><a href="/air-conditioning">Air conditioning &amp; areas</a><a href="/facilities-management">Facilities management &amp; areas</a></div>
       <small>© 2026 Air Care UK. All rights reserved.</small>
     </footer>
   );
