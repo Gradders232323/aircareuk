@@ -30,7 +30,7 @@ type LocationQuoteSectionProps = {
 function Brand({ footer = false }: { footer?: boolean }) {
   return (
     <a className={`brand${footer ? " brand-footer" : ""}`} href="/" aria-label="Air Care UK home">
-      <img className="brand-logo" src="/air-care-uk-retro-logo.png" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} />
+      <img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} />
     </a>
   );
 }

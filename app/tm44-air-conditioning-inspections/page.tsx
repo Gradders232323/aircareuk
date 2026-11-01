@@ -46,7 +46,7 @@ export default function TM44Page() {
     <main className="tm44-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <header className="site-header tm44-header">
-        <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.png" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} /></a>
+        <a className="brand" href="/" aria-label="Air Care UK home"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} /></a>
         <nav aria-label="Main navigation"><a href="/#services">Services</a><a href="#scope">Who needs one?</a><a href="#tm44-faq">FAQs</a></nav>
         <a className="header-cta" href="#tm44-enquiry">Arrange an inspection <span aria-hidden="true">↗</span></a>
       </header>
@@ -121,7 +121,7 @@ export default function TM44Page() {
         </form>
       </section>
 
-      <footer><a className="brand brand-footer" href="/"><img className="brand-logo" src="/air-care-uk-retro-logo.png" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} /></a><p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p><div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a></div><small>© 2026 Air Care UK. All rights reserved.</small></footer>
+      <footer><a className="brand brand-footer" href="/"><img className="brand-logo" src="/air-care-uk-retro-logo.svg" alt="Air Care UK — Heating &amp; Cooling" width={1254} height={1254} /></a><p>Air conditioning inspections, maintenance and servicing for homes and workplaces.</p><div><a href="mailto:hello@aircareuk.co.uk">hello@aircareuk.co.uk</a><a href="/#services">View all services</a></div><small>© 2026 Air Care UK. All rights reserved.</small></footer>
     </main>
   );
 }
