@@ -1,3 +1,4 @@
+import { BrandStamp } from "./_components/brand-stamp";
 import { quoteHref } from "./_data/quote";
 import { HeroLogo } from "./_components/hero-logo";
 import type { Metadata } from "next";
@@ -78,7 +79,7 @@ export default function Home() {
       <TM44ProcessSection />
       <TM44PricingSection />
       <section className="faq section" id="faq">
-        <div className="faq-intro"><span className="kicker">Useful answers</span><h2>Before you<br /><em>book.</em></h2><p>Find answers about inspection scope, report validity, timing and quotations.</p><a className="tm44-gov-link" href={tm44Guidance} target="_blank" rel="noreferrer">Official GOV.UK guidance ↗</a></div>
+        <div className="faq-intro"><BrandStamp /><span className="kicker">Useful answers</span><h2>Before you<br /><em>book.</em></h2><p>Find answers about inspection scope, report validity, timing and quotations.</p><a className="tm44-gov-link" href={tm44Guidance} target="_blank" rel="noreferrer">Official GOV.UK guidance ↗</a></div>
         <div className="faq-list">
           {faqs.map(([question, answer], index) => (
             <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>
