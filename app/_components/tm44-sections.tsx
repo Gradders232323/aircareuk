@@ -1,3 +1,4 @@
+import { BrandStamp } from "./brand-stamp";
 import { QuotePageLink } from "./quote-page-link";
 import { quoteHref } from "../_data/quote";
 import { tm44Faqs, tm44Guidance, tm44ReportItems, tm44PricingFactors, tm44Path } from "../_data/tm44";
@@ -21,7 +22,7 @@ export function TM44ProcessSection() {
   return <section className="section"><div className="section-heading"><div><span className="kicker">From enquiry to report</span><h2>Four clear steps.<br /><em>No guesswork.</em></h2></div></div><div className="tm44-process-grid"><div><span>01</span><h3>Share your site details</h3><p>Send the postcode, building type, unit count and any equipment records or previous report.</p></div><div><span>02</span><h3>Agree scope & price</h3><p>Confirm the systems involved, access needs and quoted work before arranging the visit.</p></div><div><span>03</span><h3>Inspect the system</h3><p>An accredited energy assessor reviews accessible equipment, controls and the building’s cooling needs.</p></div><div><span>04</span><h3>Receive your ACIR</h3><p>The report is lodged on the official register and supplied with its reference and recommendations.</p></div></div></section>;
 }
 export function TM44FaqSection({ id = "faq" }: { id?: string }) {
-  return <section className="section faq" id={id}><div className="faq-intro"><span className="kicker">TM44 questions</span><h2>Before you<br /><em>book.</em></h2><p>Scope, timing, reports and the information needed for a quote.</p><a className="tm44-gov-link" href={tm44Guidance} target="_blank" rel="noreferrer">Read the official GOV.UK guidance ↗</a></div><div className="faq-list">{tm44Faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>;
+  return <section className="section faq" id={id}><div className="faq-intro"><BrandStamp /><span className="kicker">TM44 questions</span><h2>Before you<br /><em>book.</em></h2><p>Scope, timing, reports and the information needed for a quote.</p><a className="tm44-gov-link" href={tm44Guidance} target="_blank" rel="noreferrer">Read the official GOV.UK guidance ↗</a></div><div className="faq-list">{tm44Faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>;
 }
 export function TM44FinalCTA({ context = "/" }: { context?: string }) {
   return <section className="tm44-final-cta"><div><span className="kicker">Ready for the next step?</span><h2>Get your TM44<br /><em>inspection quote.</em></h2></div><a className="button button-primary" href={quoteHref({ service: "tm44", from: context })}>Tell us about your building ↗</a></section>;

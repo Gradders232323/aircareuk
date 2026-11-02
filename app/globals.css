@@ -407,3 +407,14 @@ footer::before { background:transparent; border:0; border-bottom:1px solid rgba(
 @media (max-width:1000px) { .coverage-hero>img { max-width:340px; } }
 @media (max-width:900px) { .site-header { min-height:98px; } .hero { min-height:0; } .hero h1,.tm44-home .hero h1 { font-size:clamp(48px,7vw,66px); } .hero-copy { padding-top:34px; padding-bottom:18px; } .hero-visual.hero-brand { padding-bottom:28px; } .hero-logo-panel { padding:0 24px 28px; } .hero-logo-panel .hero-logo-art,.hero-brand-logo { max-width:360px; } }
 @media (max-width:600px) { .site-header { min-height:94px; } .section { padding-top:48px; padding-bottom:48px; } .hero h1,.tm44-home .hero h1 { font-size:clamp(43px,11.2vw,58px); } .hero-copy { padding-top:30px; } .hero-logo-art,.hero-brand-logo,.hero-logo-panel .hero-logo-art,.coverage-hero>img { max-width:290px; } .coverage-hero { padding-top:28px; padding-bottom:30px; gap:22px; } .coverage-hero h1,.dedicated-quote-page .quote-page-hero h1,.york-hero h1,.cp-hero h1,.tm44-hero h1 { font-size:clamp(39px,10vw,50px); } .york-hero-copy,.cp-hero-copy,.tm44-hero-copy { padding-top:32px; padding-bottom:24px; } .section-heading h2,.care-plan h2,.faq h2,.quote-section h2,.coverage-intro .section-heading h2,.tm44-priority-scope .section-heading h2 { font-size:36px; } .tm44-final-cta { padding-block:38px; } .quote-page-card h3 { font-size:30px; } footer::before { font-size:10px; letter-spacing:.025em; } }
+
+/* Keep the recognisable bear present throughout the customer journey. */
+.site-header { position:sticky; top:0; z-index:50; box-shadow:0 4px 16px rgb(16 46 72 / .06); }
+html { scroll-padding-top:130px; }
+.brand-stamp { display:block; width:150px; height:150px; object-fit:contain; margin:0 0 24px; }
+.brand-stamp-quote { width:132px; height:132px; margin-bottom:20px; }
+@media (max-width:600px) {
+  html { scroll-padding-top:110px; }
+  .brand-stamp { width:120px; height:120px; margin-bottom:20px; }
+  .brand-stamp-quote { width:110px; height:110px; }
+}
